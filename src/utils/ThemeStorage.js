@@ -10,6 +10,7 @@ const ThemeStorage = {
         GeneralText: "text-black",
         OppositeGeneralText: "text-white",
         FadedText: "text-black/70",
+        FadedColor: "black/70",
         Shadow: "shadow-teal-400/40",
         GeneralBG: "bg-[#F2F2FB]",
         ServiceBG: "bg-[#E6E6F2]",
@@ -23,6 +24,7 @@ const ThemeStorage = {
         GeneralText: "text-white",
         OppositeGeneralText: "text-black",
         FadedText: "text-white/70",
+        FadedColor: "white/70",
         Shadow: "shadow-yellow-400/40",
         GeneralBG: "bg-gradient-to-r from-[#1A0F2B] to-[#352A52]",
     }

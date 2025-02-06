@@ -25,7 +25,7 @@ const Services = () => {
 			</div>
 			<div className={`grid grid-cols-3 gap-10 w-[70%] mx-auto`}>
 				{Object.keys(ServiceStorage).map((key) => (
-					<Tilt tiltReverse={true} glareEnable={true} tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000} transitionSpeed={2000}>
+					<Tilt tiltReverse={true} glareEnable={true} glareBorderRadius="8px" tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000} transitionSpeed={2000}>
 						<div key={crypto.randomUUID()} className={`poppins-medium tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
 							<div className="w-6 m-3">
 								<img src={ServiceStorage[key].Icon[iconTheme]} alt="Icon" className="w-full" />
@@ -46,6 +46,10 @@ const Services = () => {
 }
 
 const possibleColors = {
+	Placeholder_color1: 'placeholder-black/70',
+	Placeholder_color2: 'placeholder-white/70',
+	Hover_Placeholder_color1: 'hover:placeholder-teal-800',
+	Hover_Placeholder_color2: 'hover:placeholder-yellow-400',
 	Text_color1: 'text-teal-800',
 	Text_color2: 'text-yellow-400',
 	Bg_color1: 'bg-teal-800',

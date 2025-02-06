@@ -28,8 +28,8 @@ const Navbar = () => {
                 <div onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}} className={`${(510 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Home</div>
                 <div onClick={() => {window.scrollTo({top: 695, behavior: "smooth"})}} className={`${(510 < scrollPosition & 1185 > scrollPosition) ? activeLink : ""} cursor-pointer`}>About</div>
                 <div onClick={() => {window.scrollTo({top: 1390, behavior: "smooth"})}} className={`${(1185 < scrollPosition & 1924 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Services</div>
-                <div onClick={() => {window.scrollTo({top: 2085, behavior: "smooth"})}} className={`${(1924 < scrollPosition & 2600 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Portfolio</div>
-                <div onClick={() => {window.scrollTo({top: 2780, behavior: "smooth"})}} className={`${(2600 < scrollPosition) ? activeLink : ""} cursor-pointer`}>Contact</div>
+                <div onClick={() => {window.scrollTo({top: 2085, behavior: "smooth"})}} className={`${(1924 < scrollPosition & 2576 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Portfolio</div>
+                <div onClick={() => {window.scrollTo({top: 2780, behavior: "smooth"})}} className={`${(2576 < scrollPosition) ? activeLink : ""} cursor-pointer`}>Contact</div>
                 {/* <div><NavLink to="/" className={({isActive}) => [isActive ? activeLink : ""]}>Home</NavLink></div>
                 <div><NavLink to="/about" className={({isActive}) => [isActive ? activeLink : ""]}>About</NavLink></div>
                 <div><NavLink to="/services" className={({isActive}) => [isActive ? activeLink : ""]}>Services</NavLink></div>
@@ -42,20 +42,24 @@ const Navbar = () => {
 };
 
 const possibleColors = {
-    Text_color1: 'text-teal-800',
-    Text_color2: 'text-yellow-400',
-    Bg_color1: 'bg-teal-800',
-    Bg_color2: 'bg-yellow-400',
-    Border_color1: 'border-teal-800',
-    Border_color2: 'border-yellow-400',
-    Hover_color1: 'hover:text-teal-800',
-    Hover_color2: 'hover:text-yellow-400',
-    Hover_Border_color1: 'hover:border-teal-800',
-    Hover_Border_color2: 'hover:border-yellow-400',
-    Shadow_color1: 'shadow-teal-400/40',
-    Shadow_color2: 'shadow-yellow-400/40',
-    Faded_text1: 'text-black/70',
-    Faded_text2: 'text-white/70',
+	Placeholder_color1: 'placeholder-black/70',
+	Placeholder_color2: 'placeholder-white/70',
+	Hover_Placeholder_color1: 'hover:placeholder-teal-800',
+	Hover_Placeholder_color2: 'hover:placeholder-yellow-400',
+	Text_color1: 'text-teal-800',
+	Text_color2: 'text-yellow-400',
+	Bg_color1: 'bg-teal-800',
+	Bg_color2: 'bg-yellow-400',
+	Border_color1: 'border-teal-800',
+	Border_color2: 'border-yellow-400',
+	Hover_color1: 'hover:text-teal-800',
+	Hover_color2: 'hover:text-yellow-400',
+	Hover_Border_color1: 'hover:border-teal-800',
+	Hover_Border_color2: 'hover:border-yellow-400',
+	Shadow_color1: 'shadow-teal-400/40',
+	Shadow_color2: 'shadow-yellow-400/40',
+	Faded_text1: 'text-black/70',
+	Faded_text2: 'text-white/70',
 };
 
 export default Navbar;

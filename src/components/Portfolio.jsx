@@ -28,7 +28,7 @@ const Portfolio = () => {
 						
 						<div className="w-[100%] mx-auto">
 							<div>
-								<a href="" target="_blank" className="cursor-pointer absolute">
+								<a href="https://github.com/Joule-1/Portfolio" target="_blank" className="cursor-pointer absolute">
 									<img src={Github} alt="Github" className={`rounded-full w-6`} />
 								</a>
 							</div>
@@ -51,6 +51,10 @@ const Portfolio = () => {
 }
 
 const possibleColors = {
+	Placeholder_color1: 'placeholder-black/70',
+	Placeholder_color2: 'placeholder-white/70',
+	Hover_Placeholder_color1: 'hover:placeholder-teal-800',
+	Hover_Placeholder_color2: 'hover:placeholder-yellow-400',
 	Text_color1: 'text-teal-800',
 	Text_color2: 'text-yellow-400',
 	Bg_color1: 'bg-teal-800',
