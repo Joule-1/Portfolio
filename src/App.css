@@ -70,3 +70,41 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+@keyframes ContainerBounce {
+    0%, 100% {
+        transform: translateY(-2%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
+    }
+  }
+
+.img-bounce{
+    animation: ContainerBounce 2s infinite;   
+}
+
+.canister {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;  
+  }
+  
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-in-out; 
+    transform: rotateX(30deg) rotateY(30deg);
+  }
+  
+.ball:hover {
+    transform: rotateX(45deg) rotateY(45deg) scale(1.1); /* Slight scaling and rotation */
+  }

@@ -14,7 +14,22 @@ import MaterialUIIcons_Light from "./ServiceIcons/MaterialUIIcons_Light.svg";
 import MaterialUIIcons_Dark from "./ServiceIcons/MaterialUIIcons_Dark.svg";
 import ResponsiveDesign_Light from "./ServiceIcons/ResponsiveDesign_Light.svg";
 import ResponsiveDesign_Dark from "./ServiceIcons/ResponsiveDesign_Dark.svg";
-
+import Profile from "./Profile.png";
+import CSS from "./TechStackIcons/CSS.png";
+import Git from "./TechStackIcons/Git.png";
+import HTML from "./TechStackIcons/HTML.png";
+import JS from "./TechStackIcons/JS.png";
+import MongoDB from "./TechStackIcons/MongoDB.png";
+import NodeJS from "./TechStackIcons/NodeJS.png";
+import ReactJS from "./TechStackIcons/ReactJS.png";
+import ReactRouter from "./TechStackIcons/ReactRouter.png";
+import Redux from "./TechStackIcons/Redux.png";
+import Tailwind from "./TechStackIcons/Tailwind.png";
+import FrameMotion from "./TechStackIcons/FrameMotion.svg";
+import PortfolioIcon from "./ProjectIcons/PortfolioIcon.png";
+import Go_Light from "./Go_Light.svg";
+import Go_Dark from "./Go_Dark.svg";
+import Go_Normal from "./Go_Normal.svg";
 
 export{
     Logo_Dark,
@@ -32,5 +47,21 @@ export{
     MaterialUIIcons_Light,
     MaterialUIIcons_Dark,
     ResponsiveDesign_Light,
-    ResponsiveDesign_Dark
+    ResponsiveDesign_Dark,
+    Profile,
+    CSS,
+    Git,
+    HTML,
+    JS,
+    MongoDB,
+    NodeJS,
+    ReactJS,
+    ReactRouter,
+    Redux,
+    Tailwind,
+    FrameMotion,
+    PortfolioIcon,
+    Go_Light,
+    Go_Dark,
+    Go_Normal,
 };

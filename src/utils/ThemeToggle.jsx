@@ -1,10 +1,11 @@
-import { React, createContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 import Contact from '../components/Contact';
 import Home from '../components/Home';
-import Portfolio from '../components/Portfolio';
+import Projects from '../components/Portfolio';
 import Services from '../components/Services';
 import Navbar from '../components/Navbar';
 import About from '../components/About';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const ThemeContext = createContext();
 
@@ -16,13 +17,24 @@ function ThemeToggle() {
     }
 
   return (
-    <ThemeContext.Provider value={{theme}}>
-        <Navbar toggleTheme = {toggleTheme}/>
-        <Home theme = {theme} />
-        <About theme = {theme}/>
-        <Contact theme = {theme} />
-        <Portfolio theme = {theme} />
-        <Services theme = {theme} />
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+        {/* <Router>
+			<Navbar />
+			<Routes>  
+				<Route path='/' element={<Home />}/>
+				<Route path='/about' element={<About />}/>
+				<Route path='/services' element={<Services />}/> 
+				<Route path='/portfolio' element={<Portfolio />}/> 
+				<Route path='/contact' element={<Contact />}/> 
+				<Route path='*' element={<NotFound />}/> 
+			</Routes>
+		</Router> */}
+		<Navbar />
+		<Home />
+		<About />
+		<Services />
+		<Projects />
+		<Contact />
     </ThemeContext.Provider>
   )
 };

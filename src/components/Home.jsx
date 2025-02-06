@@ -1,11 +1,13 @@
 import Typewriter from "typewriter-effect";
-import { Github, LinkedIn } from "../assets";
+import { Github, LinkedIn, Profile } from "../assets";
 import ThemeStorage from "../utils/ThemeStorage";
+import { useContext } from "react";
+import { ThemeContext } from "../utils/ThemeToggle";
 
-
-const Home = ({theme}) => {
+const Home = () => {
+    const {theme, toggleTheme} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
-    
+
     return(
         <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} h-screen grid grid-cols-11 gap-10 poppins-regular`}>
             <div className="col-span-5 col-start-2 my-auto">  
@@ -43,14 +45,18 @@ const Home = ({theme}) => {
                     </button>
                 </a>
             </div>
-            <div className="col-span-4 my-auto">
-                <span className={`flex w-[78%] h-110 rounded-3xl border-4 border-white bg-[#F5F5FF] shadow-lg ${currentTheme.Shadow}`}></span>
+            <div className="col-span-4 my-auto mx-auto">
+                <span className={`flex w-[100%] h-110 rounded-3xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce`}>
+                    <img src={Profile} className="w-full"/>
+                </span>
             </div>
         </section>
     );
 };
 
 const possibleColors = {
+    HomeBG_color1: "bg-[#F8F8FF]",
+    HomeBG_color2: "bg-gradient-to-r from-[#2E1A47] to-[#4B3F72]",
     Text_color1: 'text-teal-800',
     Text_color2: 'text-yellow-400',
     Bg_color1: 'bg-teal-800',

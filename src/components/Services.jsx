@@ -1,9 +1,13 @@
 import ThemeStorage from "../utils/ThemeStorage";
+import { ThemeContext } from "../utils/ThemeToggle";
 import ServiceStorage from "../utils/ServiceStorage";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import Tilt from "react-parallax-tilt";
 
-const Services = ({theme}) => {
-	const currentTheme = ThemeStorage[theme];
+const Services = () => {
+	const {theme, toggleTheme} = useContext(ThemeContext);
+    const currentTheme = ThemeStorage[theme];
+
 	const [iconTheme, setIconTheme] = useState(0);
 
 	useEffect(() => {
@@ -13,7 +17,7 @@ const Services = ({theme}) => {
 	return (
 		
 		<section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-screen poppins-regular py-20`}>
-			<div className="mb-15 text-lg poppins-bold text-left">&emsp;&emsp;
+			<div className="mb-15 text-xl poppins-bold text-left">&emsp;&emsp;
 				My&nbsp; 
 				<span className={`text-${currentTheme.HeroColor}`}>
 					Services
@@ -21,17 +25,20 @@ const Services = ({theme}) => {
 			</div>
 			<div className={`grid grid-cols-3 gap-10 w-[70%] mx-auto`}>
 				{Object.keys(ServiceStorage).map((key) => (
-					<div key={key} className={`poppins-medium tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-sm ${currentTheme.Shadow}`}>
-						<div className="w-6 m-3">
-							<img src={ServiceStorage[key].Icon[iconTheme]} alt="Icon" className="w-full" />
+					<Tilt tiltReverse={true} glareEnable={true} tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000} transitionSpeed={2000}>
+						<div key={crypto.randomUUID()} className={`poppins-medium tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
+							<div className="w-6 m-3">
+								<img src={ServiceStorage[key].Icon[iconTheme]} alt="Icon" className="w-full" />
+							</div>
+							<div className={`my-3 text-lg`}>
+								{ServiceStorage[key].HeadLine}
+							</div>
+							<div className={`${currentTheme.FadedText}`}>
+								{ServiceStorage[key].ByLine}
+							</div>
+						
 						</div>
-						<div className={`my-3 text-lg`}>
-							{ServiceStorage[key].HeadLine}
-						</div>
-						<div className={`${currentTheme.FadedText}`}>
-							{ServiceStorage[key].ByLine}
-						</div>
-					</div>
+					</Tilt>
 				))}			
 			</div>
 		</section>

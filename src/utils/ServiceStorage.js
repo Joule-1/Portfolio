@@ -14,7 +14,7 @@ const ServiceStorage = {
     ResponsiveDesign:{
         Icon: [ResponsiveDesign_Light, ResponsiveDesign_Dark],
         HeadLine: "Responsive Design",
-        ByLine: "Responsive design harmonizes fluidity and adaptability, ensuring seamless experiences across all devices."
+        ByLine: "Responsive design harmonizes fluidity and adaptability, ensuring seamless experiences across all devices, screen sizes, and resolutions."
     },
     MaterialUI:{
         Icon: [MaterialUI_Light, MaterialUI_Dark],

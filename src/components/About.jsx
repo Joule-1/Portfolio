@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ThemeStorage from "../utils/ThemeStorage";
+import { ThemeContext } from "../utils/ThemeToggle";
 
-const About = ({theme}) => {
+const About = () => {
+    const {theme, toggleTheme} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
     const [read, setRead] = useState(true);
 
     return(
         <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-screen poppins-regular grid grid-cols-11 gap-10 `}>
         <div className="col-span-4 col-start-2 my-auto">
-                <span className={`flex w-[78%] h-100 rounded-full border-5 border-${currentTheme.HeroColor} bg-[#F5F5FF]`}></span>
+                <span className={`flex w-[78%] h-100 rounded-full border-5 border-${currentTheme.HeroColor} bg-transparent`}>
+                    <img src=""  className="w-full rounded-full"/>
+                </span>
         </div>
         <div className="col-span-5 col-start-6 my-auto tracking-widest leading-7"> 
             <div className="poppins-semibold text-5xl my-5">About <span className={`text-${currentTheme.HeroColor}`}>Me</span></div>
