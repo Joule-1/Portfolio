@@ -16,17 +16,17 @@ const Services = () => {
 
 	return (
 		
-		<section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-screen poppins-regular py-20`}>
-			<div className="mb-15 text-xl poppins-bold text-left">&emsp;&emsp;
+		<section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular py-7 xl:h-screen`}>
+			<div className="mb-5 text-xl poppins-bold text-left">&emsp;&emsp;
 				My&nbsp; 
 				<span className={`text-${currentTheme.HeroColor}`}>
 					Services
 				</span>
 			</div>
-			<div className={`grid grid-cols-3 gap-10 w-[70%] mx-auto`}>
-				{Object.keys(ServiceStorage).map((key) => (
-					<Tilt tiltReverse={true} glareEnable={true} glareBorderRadius="8px" tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000} transitionSpeed={2000}>
-						<div key={crypto.randomUUID()} className={`poppins-medium tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
+			<div className={`grid grid-col-1 gap-10 w-[70%] mx-auto sm:grid-cols-2 sm:text-sm lg:grid-cols-3`}>
+				{Object.keys(ServiceStorage).map((key, index) => (
+					<Tilt key={index} tiltReverse={true} glareEnable={true} glareBorderRadius="8px" tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={1000} transitionSpeed={2000}>
+						<div className={`poppins-medium tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
 							<div className="w-6 m-3">
 								<img src={ServiceStorage[key].Icon[iconTheme]} alt="Icon" className="w-full" />
 							</div>
@@ -36,7 +36,7 @@ const Services = () => {
 							<div className={`${currentTheme.FadedText}`}>
 								{ServiceStorage[key].ByLine}
 							</div>
-						
+
 						</div>
 					</Tilt>
 				))}			

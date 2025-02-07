@@ -19,23 +19,17 @@ const Navbar = () => {
         }, [scrollPosition]);
 
     return(
-        <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} z-1 h-15 w-screen fixed flex place-content-evenly`}>
-            <div className="w-[45%] text-center flex items-center poppins-semibold">
-                <button className="w-8 hover:scale-110 cursor-pointer rounded-full" onClick={toggleTheme}><img src={currentTheme.Logo} alt="Logo" className="w-full transition-all ease-in-out duration-100"/></button>
-                <span>Akshay Pandey | Web Developer</span>
+        <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} z-10 h-15 w-screen fixed flex place-content-evenly poppins-regular`}>
+            <div className="text-center flex items-center poppins-semibold sm:w-[45%]">
+                <button className="w-8 hover:scale-110 cursor-pointer ml-2" onClick={toggleTheme}><img src={currentTheme.Logo} alt="Logo" className="w-full transition-all ease-in-out duration-100"/></button>
+                <span className="hidden text-xs sm:block md:text-sm lg:text-lg">Akshay Pandey | Web Developer</span>
             </div>
-            <div className={`flex h-15 w-[40%] place-content-evenly poppins-regular items-center ${currentTheme.FadedText}`}>
+            <div className={`flex text-sm h-15 w-[90%] place-content-evenly items-center ${currentTheme.FadedText} md:w-[50%] lg:w-[40%] lg:text-base`}>
                 <div onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}} className={`${(510 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Home</div>
-                <div onClick={() => {window.scrollTo({top: 695, behavior: "smooth"})}} className={`${(510 < scrollPosition & 1185 > scrollPosition) ? activeLink : ""} cursor-pointer`}>About</div>
-                <div onClick={() => {window.scrollTo({top: 1390, behavior: "smooth"})}} className={`${(1185 < scrollPosition & 1924 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Services</div>
+                <div onClick={() => {window.scrollTo({top: 695, behavior: "smooth"})}} className={`${(510 < scrollPosition & 1185 > scrollPosition) ? activeLink : ""} cursor-pointer hidden sm:block`}>About</div>
+                <div onClick={() => {window.scrollTo({top: 1390, behavior: "smooth"})}} className={`${(1185 < scrollPosition & 1924 > scrollPosition) ? activeLink : ""} cursor-pointer `}>Services</div>
                 <div onClick={() => {window.scrollTo({top: 2085, behavior: "smooth"})}} className={`${(1924 < scrollPosition & 2576 > scrollPosition) ? activeLink : ""} cursor-pointer`}>Portfolio</div>
                 <div onClick={() => {window.scrollTo({top: 2780, behavior: "smooth"})}} className={`${(2576 < scrollPosition) ? activeLink : ""} cursor-pointer`}>Contact</div>
-                {/* <div><NavLink to="/" className={({isActive}) => [isActive ? activeLink : ""]}>Home</NavLink></div>
-                <div><NavLink to="/about" className={({isActive}) => [isActive ? activeLink : ""]}>About</NavLink></div>
-                <div><NavLink to="/services" className={({isActive}) => [isActive ? activeLink : ""]}>Services</NavLink></div>
-                <div><NavLink to="/portfolio" className={({isActive}) => [isActive ? activeLink : ""]}>Portfolio</NavLink></div>
-                <div><NavLink to="/contact" className={({isActive}) => [isActive ? activeLink : ""]}>Contact</NavLink></div>
-                <div><NavLink to="*" className={({isActive}) => [isActive ? activeLink : ""]}>Contact</NavLink></div> */}
             </div>
         </section>
     );

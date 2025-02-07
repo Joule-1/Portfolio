@@ -27,6 +27,7 @@ import Redux from "./TechStackIcons/Redux.png";
 import Tailwind from "./TechStackIcons/Tailwind.png";
 import FrameMotion from "./TechStackIcons/FrameMotion.svg";
 import PortfolioIcon from "./ProjectIcons/PortfolioIcon.png";
+import Postman from "./TechStackIcons/Postman.png";
 import Go_Light from "./Go_Light.svg";
 import Go_Dark from "./Go_Dark.svg";
 import Go_Normal from "./Go_Normal.svg";
@@ -61,6 +62,7 @@ export{
     Tailwind,
     FrameMotion,
     PortfolioIcon,
+    Postman,
     Go_Light,
     Go_Dark,
     Go_Normal,

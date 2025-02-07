@@ -9,11 +9,16 @@ const Home = () => {
     const currentTheme = ThemeStorage[theme];
 
     return(
-        <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} h-screen grid grid-cols-11 gap-10 poppins-regular`}>
-            <div className="col-span-5 col-start-2 my-auto">  
-                <div className="text-3xl poppins-semibold my-5">Hi, Myself</div>
-                <div className="text-4xl poppins-bold my-5">Akshay Pandey</div>
-                <div className="text-3xl poppins-semibold flex my-5">And I'm a&nbsp;
+        <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} h-full grid grid-cols-11 poppins-regular md:h-screen md:gap-10`}>
+            <div className="col-span-11 m-auto md:col-span-4 md:order-last mt-20">
+                <span className={`flex w-[100%] h-100 rounded-4xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce sm:h-110`}>
+                    <img src={Profile} className="w-full"/>
+                </span>
+            </div>
+            <div className="col-span-11 col-start-2 my-auto pr-2 md:col-span-5 md:col-start-2">  
+                <div className="text-xl poppins-semibold my-5 sm:text-3xl md:text-xl lg:text-3xl">Hi, Myself</div>
+                <div className="text-2xl poppins-bold my-5 sm:text-4xl md:text-3xl lg:text-4xl">Akshay Pandey</div>
+                <div className="text-xl poppins-semibold flex my-5 sm:text-3xl md:text-xl lg:text-3xl">And I'm a&nbsp;
                     <span className={`text-${currentTheme.HeroColor}`}>
                         <Typewriter
                             onInit={(typewriter) => {
@@ -30,8 +35,8 @@ const Home = () => {
                             }}/>
                     </span>
                 </div>
-                <div className={`${currentTheme.FadedText} my-5`}>Hey there! I’m Akshay Pandey, a front-end developer with a knack for turning code into visually stunning, interactive web experiences.</div>
-                <div className="my-5 flex place-content-evenly w-[20%]">
+                <div className={`${currentTheme.FadedText} my-5 md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a front-end developer with a knack for turning code into visually stunning, interactive web experiences.</div>
+                <div className="my-5 flex place-content-evenly w-[30%] sm:w-[20%] md:w-[30%] xl:w-[20%]">
                     <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
                         <img src={Github} className={`rounded-full border-${currentTheme.HeroColor} border-3 w-10 transition-all ease-in-out duration-100`} />
                     </a>
@@ -40,16 +45,12 @@ const Home = () => {
                     </a>
                 </div>
                 <a href="Resume/Akshay_Pandey_Resume.pdf" download={"Akshay_Pandey_Resume.pdf"}>
-                    <button className={`rounded-xl border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
+                    <button className={`rounded-xl mb-8 border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
                         Download Résumé
                     </button>
                 </a>
             </div>
-            <div className="col-span-4 my-auto mx-auto">
-                <span className={`flex w-[100%] h-110 rounded-3xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce`}>
-                    <img src={Profile} className="w-full"/>
-                </span>
-            </div>
+            
         </section>
     );
 };

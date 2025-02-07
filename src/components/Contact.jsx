@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { ThemeContext } from "../utils/ThemeToggle";
 import ThemeStorage from "../utils/ThemeStorage";
 import Tilt from "react-parallax-tilt";
@@ -7,18 +7,29 @@ const Contact = () => {
 	const {theme, toggleTheme} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
 	const InputCSS = `rounded-xl p-3 m-3 outline-none hover:placeholder-${currentTheme.HeroColor} ${currentTheme.HomeBG}`;
+	const fullname = useRef('');	
+	const email = useRef('');
+	const subject = useRef('');
+	const message = useRef('');
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		fullname.current.value = '';
+		email.current.value = '';
+		subject.current.value = '';
+		message.current.value = '';
+	}
 
   return (
-    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-screen py-20 poppins-regular overflow-hidden`}>
-		<div className={`text-5xl text-center poppins-semibold`}>Contact <span className={`text-${currentTheme.HeroColor}`}>Me</span></div>
+    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full py-17 poppins-regular overflow-hidden sm:h-screen`}>
+		<div className={`text-2xl text-center poppins-semibold sm:text-4xl lg:text-4xl`}>Contact <span className={`text-${currentTheme.HeroColor}`}>Me</span></div>
 		<Tilt tiltReverse={true} tiltMaxAngleX={5} tiltMaxAngleY={5} perspective={1000} transitionSpeed={2000}>
-			<form className={`flex justify-center items-center flex-col placeholder-${currentTheme.FadedColor} text-lg mt-5`} onSubmit={(event) => {event.preventDefault()}}>
-				<div className="w-[50%] flex justify-center">
-					<input type="text" placeholder="Full Name" required autoComplete="off" className={`${InputCSS} w-[45%]`}/>
-					<input type="email" placeholder="Email Address" autoComplete="off" required className={`${InputCSS} w-[45%]`}/>
+			<form className={`flex justify-center items-center flex-col placeholder-${currentTheme.FadedColor} text-base mt-5 md:text-lg`} onSubmit={handleSubmit}>
+				<div className="w-[100%] flex flex-wrap justify-center md:w-[100%] lg:w-[60%]">
+					<input type="text" name="fullname" ref={fullname} placeholder="Full Name" required autoComplete="off" className={`${InputCSS} w-[80%] sm:w-[45%]`}/>
+					<input type="email" name="email" ref={email} placeholder="Email Address" required autoComplete="off" className={`${InputCSS} w-[80%] sm:w-[45%]`}/>
 				</div>
-				<input type="text" placeholder="Email Subject" required autoComplete="off" className={`${InputCSS} w-[47%]`}/>
-				<textarea rows={"8"} placeholder="Your Message" required autoComplete="off" className={`${InputCSS} w-[47%] resize-none`}></textarea>
+				<input type="text" name="subject" ref={subject} placeholder="Email Subject" required autoComplete="off" className={`${InputCSS} w-[80%] md:w-[90%] lg:w-[55%]`}/>
+				<textarea rows={"8"} name="message" ref={message} placeholder="Your Message" required autoComplete="off" className={`${InputCSS} w-[80%] md:w-[90%] lg:w-[55%] resize-none`}></textarea>
 				<button type="submit" className={`m-2 rounded-xl border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}>
 					Send Message
 				</button>

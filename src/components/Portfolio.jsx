@@ -15,16 +15,16 @@ const Portfolio = () => {
 	}, [theme]);
 
   return (
-    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-screen poppins-regular py-15`}>
+    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular lg:h-screen`}>
 		<div className="text-2xl poppins-bold text-center py-5">&emsp;&emsp;
 				My&nbsp; 
 				<span className={`text-${currentTheme.HeroColor}`}>
 					Projects
 				</span>
 			</div>
-			<div className={`grid grid-cols-3 gap-10 w-[80%] mx-auto`}>
-				{Object.keys(ProjectStorage).map((key) => (
-					<div key={crypto.randomUUID()} className={`poppins-semibold tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
+			<div className={`grid grid-cols-1 gap-10 w-[80%] mx-auto sm:grid-cols-2 sm:text-sm lg:grid-cols-3`}>
+				{Object.keys(ProjectStorage).map((key, index) => (
+					<div key={index} className={`poppins-semibold tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
 						
 						<div className="w-[100%] mx-auto">
 							<div>
