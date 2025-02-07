@@ -1,6 +1,9 @@
 import { useState, useContext } from "react";
 import ThemeStorage from "../utils/ThemeStorage";
 import { ThemeContext } from "../utils/ThemeToggle";
+import { JS, CSS, FrameMotion, Git, HTML, MongoDB, NodeJS, ReactJS, ReactRouter, Redux, Tailwind } from "../assets";
+
+const TechStack = [ JS, CSS, FrameMotion, Git, HTML, MongoDB, NodeJS, ReactJS, ReactRouter, Redux, Tailwind ];
 
 const About = () => {
     const {theme, toggleTheme} = useContext(ThemeContext);
@@ -9,10 +12,11 @@ const About = () => {
 
     return(
         <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-screen poppins-regular grid grid-cols-11 gap-10 `}>
-        <div className="col-span-4 col-start-2 my-auto">
-                <span className={`flex w-[78%] h-100 rounded-full border-5 border-${currentTheme.HeroColor} bg-transparent`}>
-                    <img src=""  className="w-full rounded-full"/>
-                </span>
+        <div className={`grid grid-cols-4  col-span-4 col-start-2 m-auto w-[78%] rounded-xl flex h-100 border-5 border-${currentTheme.HeroColor} bg-transparent`}>
+                
+                {Object.keys(TechStack).map((index=0) => (
+                    <img key={index} src={TechStack[index]} className="w-[50%] h-[50%] border-1 m-auto"/>
+                ))}
         </div>
         <div className="col-span-5 col-start-6 my-auto tracking-widest leading-7"> 
             <div className="poppins-semibold text-5xl my-5">About <span className={`text-${currentTheme.HeroColor}`}>Me</span></div>

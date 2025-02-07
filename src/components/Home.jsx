@@ -39,7 +39,7 @@ const Home = () => {
                         <img src={LinkedIn} className={`rounded-full border-${currentTheme.HeroColor} border-3 w-10 transition-all ease-in-out duration-100`} />
                     </a>
                 </div>
-                <a href="/Akshay_Pandey_Resume.pdf" download={"Akshay_Pandey_Resume.pdf"}>
+                <a href="Resume/Akshay_Pandey_Resume.pdf" download={"Akshay_Pandey_Resume.pdf"}>
                     <button className={`rounded-xl border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
                         Download Résumé
                     </button>
