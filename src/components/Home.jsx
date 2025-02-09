@@ -16,9 +16,9 @@ const Home = () => {
                 </span>
             </div>
             <div className="col-span-11 col-start-2 my-auto pr-2 md:col-span-5 md:col-start-2">  
-                <div className="text-xl poppins-semibold my-5 sm:text-3xl md:text-xl lg:text-3xl">Hi, Myself</div>
+                <div className="text-base poppins-semibold my-5 sm:text-3xl md:text-xl lg:text-3xl">Hi, Myself</div>
                 <div className="text-2xl poppins-bold my-5 sm:text-4xl md:text-3xl lg:text-4xl">Akshay Pandey</div>
-                <div className="text-xl poppins-semibold flex my-5 sm:text-3xl md:text-xl lg:text-3xl">And I'm a&nbsp;
+                <div className="text-base poppins-semibold flex my-5 sm:text-3xl md:text-xl lg:text-3xl">And I'm a&nbsp;
                     <span className={`text-${currentTheme.HeroColor}`}>
                         <Typewriter
                             onInit={(typewriter) => {
@@ -35,7 +35,7 @@ const Home = () => {
                             }}/>
                     </span>
                 </div>
-                <div className={`${currentTheme.FadedText} my-5 md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a front-end developer with a knack for turning code into visually stunning, interactive web experiences.</div>
+                <div className={`${currentTheme.FadedText} my-5 text-sm md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a front-end developer with a knack for turning code into visually stunning, interactive web experiences.</div>
                 <div className="my-5 flex place-content-evenly w-[30%] sm:w-[20%] md:w-[30%] xl:w-[20%]">
                     <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
                         <img src={Github} className={`rounded-full border-${currentTheme.HeroColor} border-3 w-10 transition-all ease-in-out duration-100`} />

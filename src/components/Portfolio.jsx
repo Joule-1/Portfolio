@@ -14,37 +14,82 @@ const Portfolio = () => {
 		setIconTheme((theme==="LightTheme") ? 0 : 1);
 	}, [theme]);
 
+	const [projectHeight, setProjectHeight] = useState(2);
+	const [readMore, setReadMore] = useState(true);
+	const [sectionHeight, setSectionHeight] = useState(`h-screen`)
+	const ProjectStorageUpdated = Object.values(ProjectStorage).slice(0, projectHeight);
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth <= 640){ 
+				setProjectHeight(2);
+			}
+			else if(window.innerWidth > 640 && window.innerWidth <= 1024){
+				setProjectHeight(4); 
+			}
+			else{
+				setProjectHeight(6);
+			}};
+			
+		handleResize(); 														// Initial check
+		window.addEventListener("resize", handleResize);
+
+  		return () => window.removeEventListener("resize", handleResize);}, []);
+
+	const modifyServiceLength = () => {
+		if(readMore){
+			setProjectHeight((prev) => (prev + 2));
+			setSectionHeight(`h-full`);
+			setReadMore((projectHeight > 4 ) ? true : false)
+		}
+		else{
+			if (window.innerWidth <= 640){ 
+				setProjectHeight(2);
+				setSectionHeight(`h-screen`);
+				setReadMore(true);
+				}
+			else if(window.innerWidth > 640 && window.innerWidth <= 1024){
+					setProjectHeight(4); 
+					setSectionHeight(`h-screen`);
+					setReadMore(true);
+				}
+		}
+	}
+
   return (
-    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular lg:h-screen`}>
-		<div className="text-2xl poppins-bold text-center py-5">&emsp;&emsp;
+    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular ${sectionHeight}`}>
+		<div className="text-2xl poppins-bold text-center pt-16 pb-2">&emsp;&emsp;
 				My&nbsp; 
 				<span className={`text-${currentTheme.HeroColor}`}>
 					Projects
 				</span>
 			</div>
-			<div className={`grid grid-cols-1 gap-10 w-[80%] mx-auto sm:grid-cols-2 sm:text-sm lg:grid-cols-3`}>
-				{Object.keys(ProjectStorage).map((key, index) => (
+			<div className={`grid grid-cols-1 gap-10 w-[75%] mx-auto sm:grid-cols-2 sm:text-sm lg:grid-cols-3`}>
+				{Object.keys(ProjectStorageUpdated).map((key, index) => (
 					<div key={index} className={`poppins-semibold tracking-wider p-3 rounded-lg leading-7 ${currentTheme.ServiceBG} shadow-md ${currentTheme.Shadow}`}>
 						
 						<div className="w-[100%] mx-auto">
-							<div>
-								<a href="https://github.com/Joule-1/Portfolio" target="_blank" className="cursor-pointer absolute">
+							<div className="hover:scale-101">
+								<a href={ProjectStorageUpdated[key].GithubLink} target="_blank" className="cursor-pointer absolute">
 									<img src={Github} alt="Github" className={`rounded-full w-6`} />
 								</a>
 							</div>
-								<img src={ProjectStorage[key].Icon} alt="Icon" className="w-full rounded-lg"/>
+								<img src={ProjectStorageUpdated[key].Icon} alt="Icon" className="w-full rounded-lg"/>
 							
 						</div>
 						<div className={`mt-2 text-md flex place-content-between`}>
-							{ProjectStorage[key].HeadLine}
+							{ProjectStorageUpdated[key].HeadLine}
 							<div className={`hover:scale-110`}>
-								<a href="" target="_blank" className="cursor-pointer">
+								<a href={ProjectStorageUpdated[key].ProjectLink} target="_blank" className="cursor-pointer">
 									<img src={Go_Normal} alt="Go_Icon" className={`rounded-lg w-8 bg-${currentTheme.HeroColor} items-center transition-all ease-in-out duration-100`} />
 								</a>
 							</div>
 						</div>					
 					</div>
 				))}			
+			</div>
+			<div className="flex justify-center items-center mt-2">
+				<button onClick={modifyServiceLength} className={`rounded-xl mt-3 border-4 border-transparent bg-${currentTheme.HeroColor} p-1 text-white text-sm poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer lg:hidden`}>Read <span>{readMore ? `More` : `Less`}</span></button>
 			</div>
 	</section>
   )

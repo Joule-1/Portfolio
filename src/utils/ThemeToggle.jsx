@@ -10,7 +10,7 @@ import About from '../components/About';
 const ThemeContext = createContext();
 
 function ThemeToggle() {
-    const [theme, setTheme] = useState("LightTheme");
+    const [theme, setTheme] = useState("DarkTheme");
 
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === "LightTheme" ? "DarkTheme" : "LightTheme"));

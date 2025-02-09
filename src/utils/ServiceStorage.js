@@ -1,4 +1,4 @@
-import { AwesomeSupport_Dark, AwesomeSupport_Light, CleanCode_Dark, CleanCode_Light, CreativeDesign_Dark, CreativeDesign_Light, MaterialUIIcons_Dark, MaterialUIIcons_Light, MaterialUI_Dark, MaterialUI_Light, ResponsiveDesign_Dark, ResponsiveDesign_Light } from "../assets";
+import { AwesomeSupport_Dark, AwesomeSupport_Light, CleanCode_Dark, CleanCode_Light, CreativeDesign_Dark, CreativeDesign_Light, MaterialUIIcons_Dark, MaterialUIIcons_Light, MaterialUI_Dark, MaterialUI_Light, AdaptiveDesign_Dark, AdaptiveDesign_Light } from "../assets";
 
 const ServiceStorage = {
     CreativeDesign:{
@@ -12,9 +12,9 @@ const ServiceStorage = {
         ByLine: "Clean code ensures clarity, simplicity, and maintainability, leading to efficient, scalable, and high-quality software solutions."
     },
     ResponsiveDesign:{
-        Icon: [ResponsiveDesign_Light, ResponsiveDesign_Dark],
+        Icon: [AdaptiveDesign_Light, AdaptiveDesign_Dark],
         HeadLine: "Adaptive Design",
-        ByLine: 'Responsive design adapts seamlessly across devices, ensuring accessibility, usability, and performance on all screen sizes.'
+        ByLine: 'Responsive design adapts seamlessly across devices, ensuring accessibility and performance on all screen sizes.'
     },
     AwesomeSupport:{
         Icon: [AwesomeSupport_Light, AwesomeSupport_Dark],

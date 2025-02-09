@@ -12,8 +12,8 @@ import MaterialUI_Light from "./ServiceIcons/MaterialUI_Light.svg";
 import MaterialUI_Dark from "./ServiceIcons/MaterialUI_Dark.svg";
 import MaterialUIIcons_Light from "./ServiceIcons/MaterialUIIcons_Light.svg";
 import MaterialUIIcons_Dark from "./ServiceIcons/MaterialUIIcons_Dark.svg";
-import ResponsiveDesign_Light from "./ServiceIcons/ResponsiveDesign_Light.svg";
-import ResponsiveDesign_Dark from "./ServiceIcons/ResponsiveDesign_Dark.svg";
+import AdaptiveDesign_Light from "./ServiceIcons/AdaptiveDesign_Light.svg";
+import AdaptiveDesign_Dark from "./ServiceIcons/AdaptiveDesign_Dark.svg";
 import Profile from "./Profile.png";
 import CSS from "./TechStackIcons/CSS.png";
 import Git from "./TechStackIcons/Git.png";
@@ -47,8 +47,8 @@ export{
     MaterialUI_Dark,
     MaterialUIIcons_Light,
     MaterialUIIcons_Dark,
-    ResponsiveDesign_Light,
-    ResponsiveDesign_Dark,
+    AdaptiveDesign_Light,
+    AdaptiveDesign_Dark,
     Profile,
     CSS,
     Git,

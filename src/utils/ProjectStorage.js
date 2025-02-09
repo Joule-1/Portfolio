@@ -4,7 +4,8 @@ const ProjectStorage = {
     Portfolio:{
         Icon: PortfolioIcon,
         HeadLine: "Portfolio",
-        ByLine: "Showcasing my creative journey, blending design, development, and innovation to bring my unique ideas and projects to life.",
+        GithubLink: "https://github.com/Joule-1/Portfolio",
+        ProjectLink: ""
     },
 }
 
