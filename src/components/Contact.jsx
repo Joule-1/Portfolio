@@ -20,7 +20,7 @@ const Contact = () => {
 	}
 
   return (
-    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full py-18 poppins-regular h-screen`}>
+    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full py-18 poppins-regular overflow-hidden h-screen`}>
 		<div className={`text-2xl text-center poppins-semibold sm:text-4xl lg:text-4xl`}>Contact <span className={`text-${currentTheme.HeroColor}`}>Me</span></div>
 		<Tilt tiltReverse={true} tiltMaxAngleX={5} tiltMaxAngleY={5} perspective={1000} transitionSpeed={2000}>
 			<form className={`flex justify-center items-center flex-col placeholder-${currentTheme.FadedColor} text-base mt-5 md:text-lg`} onSubmit={handleSubmit}>

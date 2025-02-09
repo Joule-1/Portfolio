@@ -5,12 +5,11 @@ import Projects from '../components/Portfolio';
 import Services from '../components/Services';
 import Navbar from '../components/Navbar';
 import About from '../components/About';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const ThemeContext = createContext();
 
 function ThemeToggle() {
-    const [theme, setTheme] = useState("DarkTheme");
+    const [theme, setTheme] = useState("LightTheme");
 
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === "LightTheme" ? "DarkTheme" : "LightTheme"));
