@@ -53,12 +53,12 @@
 					setSectionHeight(`h-screen`);
 					setReadMore(true);
 				}
-		}
+		} 
 	}
 			
 		return (
 			<section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} poppins-regular ${sectionHeight}`}>
-				<div className="mb-2 pt-16 text-xl poppins-bold text-left">&emsp;&emsp;
+				<div className="mb-2 pt-16 text-2xl poppins-bold">&emsp;&emsp;
 					My&nbsp;
 					<span className={`text-${currentTheme.HeroColor}`}>
 						Services

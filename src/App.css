@@ -75,7 +75,7 @@ img {
 @keyframes ContainerBounce {
     0%, 100% {
         transform: translateY(-2%);
-      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50% {
         transform: none;
@@ -85,4 +85,14 @@ img {
 
 .img-bounce{
     animation: ContainerBounce 2s infinite;   
+}
+
+.slide-out{
+    transform: translateX(-112%);
+    transition: transform 6s ease-in-out;
+}
+
+.slide-in {
+    transform: translateX(30%);
+    transition: transform 4s ease-in-out;
 }

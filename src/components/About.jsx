@@ -22,7 +22,7 @@ const About = () => {
             <div className="col-span-10 col-start-2 my-auto tracking-widest leading-7 pr-2 md:col-span-5 lg:col-span-6"> 
                 <div className="poppins-semibold text-4xl my-5 lg:text-4xl">About <span className={`text-${currentTheme.HeroColor}`}>Me</span></div>
                 <div className="poppins-semibold text-xl my-3 lg:text-3xl">Frontend Developer</div>
-                <div className="poppins-medium my-3 md:text-base">
+                <div className="poppins-medium my-3 md:text-base lg:text-lg">
                     I am a dedicated Web Developer with a solid foundation in HTML, CSS, and JavaScript, specializing in React. I take pride in crafting clean, scalable, and intuitive web solutions that effectively bring ideas to life. With a strong focus on writing maintainable code, I collaborate with others to solve challenges and deliver thoughtful, practical solutions.
                     <div className={`hidden sm:${(showReadMore===true) ? (`hidden`) : (`block`)}`}>
                         I strive to ensure that every project is visually appealing, performs efficiently, and is accessible to all users.<span className="hidden sm:inline md:hidden lg:inline"> Staying informed of industry trends and best practices allows me to continually hone my skills, ensuring that I create dynamic, user-friendly web applications. My goal is to build meaningful, functional digital experiences that leave a lasting impression while providing real value.</span>

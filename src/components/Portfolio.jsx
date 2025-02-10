@@ -54,11 +54,11 @@ const Portfolio = () => {
 					setReadMore(true);
 				}
 		}
-	}
+	} 
 
   return (
     <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular ${sectionHeight}`}>
-		<div className="text-2xl poppins-bold text-center pt-16 pb-2">&emsp;&emsp;
+		<div className="text-2xl poppins-bold pt-16 pb-2">&emsp;&emsp;
 				My&nbsp; 
 				<span className={`text-${currentTheme.HeroColor}`}>
 					Projects
