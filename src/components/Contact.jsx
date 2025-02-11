@@ -39,6 +39,7 @@ const Contact = () => {
 			setSubmitMessage(false);
 			setSubmitMessageDisplay('slide-in');
 			setSubmitText('Send Message');
+			console.log(error)
 		}
 
 		const clearValues = setTimeout(clearValuesTimeout, 4000);
