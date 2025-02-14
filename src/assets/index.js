@@ -1,3 +1,9 @@
+import ThemeToggle_Light from "./ThemeToggle_Light.png";
+import ThemeToggle_Dark from "./ThemeToggle_Dark.png";
+import NavbarMenu_Light from "./NavbarMenu_Light.svg";
+import NavbarMenu_Dark from "./NavbarMenu_Dark.svg";
+import CloseIcon_Light from "./CloseIcon_Light.svg";
+import CloseIcon_Dark from "./CloseIcon_Dark.svg";
 import Logo_Dark from "./Logo_Dark.png";
 import Logo_Light from "./Logo_Light.svg";
 import Github from "./SocialMediaIcons/Github.png";
@@ -33,6 +39,12 @@ import Go_Dark from "./Go_Dark.svg";
 import Go_Normal from "./Go_Normal.svg";
 
 export{
+    ThemeToggle_Light,
+    ThemeToggle_Dark,
+    NavbarMenu_Light,
+    NavbarMenu_Dark,
+    CloseIcon_Light,
+    CloseIcon_Dark,
     Logo_Dark,
     Logo_Light,
     Github,

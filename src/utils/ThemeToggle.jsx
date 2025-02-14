@@ -18,11 +18,11 @@ function ThemeToggle() {
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
 		<Navbar />
-		<Home />
-		<About />
+		{/* <Home /> */}
+		{/* <About />
 		<Services />
 		<Projects />
-		<Contact />
+		<Contact /> */}
     </ThemeContext.Provider>
   )
 };
