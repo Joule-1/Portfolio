@@ -9,6 +9,8 @@ import Logo_Light from "./Logo_Light.svg";
 import ProjectExp from "./ProjectExp.png";
 import CodeExp from "./CodeExp.png";
 import CalenderExp from "./CalenderExp.png";
+import AboutImage_Light from "./AboutImage_Light.png";
+import AboutImage_Dark from "./AboutImage_Dark.png";
 import Github from "./SocialMediaIcons/Github.png";
 import LinkedIn from "./SocialMediaIcons/LinkedIn.png";
 import Email from "./SocialMediaIcons/Email.png";
@@ -54,6 +56,8 @@ export{
     ProjectExp,
     CodeExp,
     CalenderExp,
+    AboutImage_Light,
+    AboutImage_Dark,
     Github,
     LinkedIn,
     Email,

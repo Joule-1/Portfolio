@@ -1,4 +1,15 @@
-import { Logo_Light, Logo_Dark, Go_Light, Go_Dark, ThemeToggle_Light, ThemeToggle_Dark, NavbarMenu_Light, NavbarMenu_Dark, CloseIcon_Light, CloseIcon_Dark } from "../assets";
+import { Logo_Light, 
+        Logo_Dark, 
+        Go_Light, Go_Dark, 
+        ThemeToggle_Light, 
+        ThemeToggle_Dark, 
+        NavbarMenu_Light, 
+        NavbarMenu_Dark, 
+        CloseIcon_Light, 
+        CloseIcon_Dark,
+        AboutImage_Light,
+        AboutImage_Dark,
+        } from "../assets";
 
 
 const ThemeStorage = {
@@ -8,7 +19,9 @@ const ThemeStorage = {
         CloseIcon: CloseIcon_Light,
         Logo: Logo_Light,
         Go: Go_Light,
+        AboutImage: AboutImage_Light,
         HeroColor: "teal-800",
+        AlternateHeroColor: "gray-800",
         HomeBG: "bg-[#F8F8FF]",
         GeneralText: "text-black",
         OppositeGeneralText: "text-white",
@@ -25,7 +38,9 @@ const ThemeStorage = {
         CloseIcon: CloseIcon_Dark,
         Logo: Logo_Dark,
         Go: Go_Dark,
+        AboutImage: AboutImage_Dark,
         HeroColor: "yellow-400",
+        AlternateHeroColor: "cyan-500",
         HomeBG: "bg-gradient-to-r from-[#2E1A47] to-[#4B3F72]",
         GeneralText: "text-white",
         OppositeGeneralText: "text-black",

@@ -19,8 +19,8 @@ function ThemeToggle() {
     <ThemeContext.Provider value={{theme, toggleTheme}}>
 		<Navbar />
 		<Home />
-		{/* <About />
-		<Services />
+		<About />
+		{/*<Services />
 		<Projects />*/}
 		<Contact /> 
     </ThemeContext.Provider>
