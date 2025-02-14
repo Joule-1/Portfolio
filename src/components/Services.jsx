@@ -1,7 +1,7 @@
 	import ThemeStorage from "../utils/ThemeStorage";
 	import { ThemeContext } from "../utils/ThemeToggle";
 	import ServiceStorage from "../utils/ServiceStorage";
-	import { useEffect, useState, useContext, useRef } from "react";
+	import { useEffect, useState, useContext } from "react";
 	import Tilt from "react-parallax-tilt";
 
 	const Services = () => {

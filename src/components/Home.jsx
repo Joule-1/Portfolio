@@ -1,56 +1,86 @@
 import Typewriter from "typewriter-effect";
-import { Github, LinkedIn, Profile } from "../assets";
+import { CountUp } from 'use-count-up';
+import { Github, LinkedIn, Profile, Email, CalenderExp, CodeExp, ProjectExp } from "../assets";
 import ThemeStorage from "../utils/ThemeStorage";
 import { useContext } from "react";
 import { ThemeContext } from "../utils/ThemeToggle";
+import Tilt from "react-parallax-tilt";
 
 const Home = () => {
     const {theme, toggleTheme} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
 
     return(
-        <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} h-full grid grid-cols-11 poppins-regular md:h-screen md:gap-10`}>
-            <div className="col-span-11 m-auto md:col-span-4 md:order-last mt-20">
-                <span className={`flex w-[100%] h-100 rounded-4xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce sm:h-110`}>
+        <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} poppins-regular h-full sm:pb-5`}>
+            <div className={`flex items-center justify-center flex-col sm:flex-row`}>
+                <div id='ProfileImage' className={`mt-20 h-100 flex rounded-4xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce sm:mt-25 sm:order-last sm:w-auto`}>
                     <img src={Profile} className="w-full"/>
-                </span>
-            </div>
-            <div className="col-span-11 col-start-2 my-auto pr-2 md:col-span-5 md:col-start-2">  
-                <div className="text-base poppins-semibold my-5 sm:text-3xl md:text-xl lg:text-3xl">Hi, Myself</div>
-                <div className="text-2xl poppins-bold my-5 sm:text-4xl md:text-3xl lg:text-4xl">Akshay Pandey</div>
-                <div className="text-base poppins-semibold flex my-5 sm:text-3xl md:text-xl lg:text-3xl">And I'm a&nbsp;
-                    <span className={`text-${currentTheme.HeroColor}`}>
-                        <Typewriter
+                </div>
+                <div className="w-full sm:w-[60%] sm:mt-25">  
+                    <div className="poppins-semibold m-5 text-xl">Hi, Myself</div>
+                    <div className="poppins-bold m-5 text-2xl lg:text-3xl">Akshay Pandey</div>
+                    <div className="poppins-semibold m-5 text-xl sm:text-xl">And I'm a&nbsp;
+                        <span className={`text-${currentTheme.HeroColor} inline-block`}>
+                            <Typewriter
+                            options={
+                                {
+                                    loop: true
+                                }
+                            }
                             onInit={(typewriter) => {
                                 typewriter
-                                    
-                                    .typeString("Frontend Developer")
+                                    .typeString("MERN Developer")
                                     .pauseFor(500)
                                     .deleteAll(100)
                                     .typeString("Web Designer")
                                     .pauseFor(500)
                                     .deleteAll(100)
-                                    .typeString("Web Developer")
+                                    .typeString("Full Stack Developer")
                                     .start()
-                            }}/>
-                    </span>
-                </div>
-                <div className={`${currentTheme.FadedText} my-5 text-sm md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a front-end developer with a knack for turning code into visually stunning, interactive web experiences.</div>
-                <div className="my-5 flex place-content-evenly w-[30%] sm:w-[20%] md:w-[30%] xl:w-[20%]">
-                    <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
-                        <img src={Github} className={`rounded-full border-${currentTheme.HeroColor} border-3 w-10 transition-all ease-in-out duration-100`} />
+                                }}/>
+                        </span>
+                    </div>
+                    <div className={`${currentTheme.FadedText} text-sm m-5 md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a full stack developer with a knack for turning code into visually stunning, interactive web experiences.</div>
+                    <div className="flex items-center place-content-between m-5 max-w-[25%] min-w-[15%] w-auto sm:w-[30%] md:w-[25%] lg:w-[18%] xl:w-[15%]">
+                        <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
+                            <img src={Github} className={`w-6 transition-all ease-in-out duration-100`} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/akshay-pandey-joule/" target="_blank" className="hover:scale-110 cursor-pointer">
+                            <img src={LinkedIn} className={`w-6 transition-all ease-in-out duration-100`} />
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pandeyakshay301@gmail.com" target="_blank" className="hover:scale-110 cursor-pointer">
+                            <img src={Email} className={`w-6 transition-all ease-in-out duration-100`} />
+                        </a>
+                    </div>
+                    <a href="Resume/Akshay_Pandey_Resume.pdf" target="_blank">
+                        <button className={`rounded-xl text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.HeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
+                            Download Résumé
+                        </button>
                     </a>
-                    <a href="https://www.linkedin.com/in/akshay-pandey-joule/" target="_blank" className="hover:scale-110 cursor-pointer">
-                        <img src={LinkedIn} className={`rounded-full border-${currentTheme.HeroColor} border-3 w-10 transition-all ease-in-out duration-100`} />
-                    </a>
                 </div>
-                <a href="Resume/Akshay_Pandey_Resume.pdf" download={"Akshay_Pandey_Resume.pdf"}>
-                    <button className={`rounded-xl mb-8 border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
-                        Download Résumé
-                    </button>
-                </a>
             </div>
-            
+			<Tilt 
+				className={`mt-10 mx-auto w-[78%] flex items-center rounded-2xl place-content-evenly ${currentTheme.ServiceBG} poppins-semibold text-center hidden md:flex md:text-sm lg:text-base xl:text-lg `} 
+				tiltReverse={true} 
+				glareEnable={true} 
+				glareBorderRadius="8px" 
+				tiltMaxAngleX={5} 
+				tiltMaxAngleY={2} 
+				perspective={1000}
+				transitionSpeed={1000}>
+				<div className={`w-[30%] m-8`}>
+					<img src={ProjectExp} className="w-13 mx-auto m-5" />
+					<span>+<CountUp isCounting end={6} duration={1.5} /> Developed Projects</span>
+					</div>
+				<div className={`w-[30%] m-8`}>
+					<img src={CodeExp} className="w-13 mx-auto m-5" />
+					<span>+<CountUp isCounting end={8} duration={3} />  Technologies Know</span>
+					</div>
+				<div className={`w-[30%] m-8`}>
+					<img src={CalenderExp} className="w-13 mx-auto m-5" />
+					<span>+<CountUp isCounting end={1} duration={1} />  Year Of Experience</span>
+					</div>
+			</Tilt>
         </section>
     );
 };

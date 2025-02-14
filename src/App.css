@@ -96,3 +96,33 @@ img {
     transform: translateX(30%);
     transition: transform 4s ease-in-out;
 }
+
+@media only screen and (max-width: 640px) {
+    #ProfileImage {
+      width: 40%;
+    }
+  }
+
+@media only screen and (max-width: 540px) {
+    #ProfileImage {
+      width: 45%;
+    }
+  }
+
+@media only screen and (max-width: 490px) {
+    #ProfileImage {
+      width: 50%;
+    }
+  }
+
+@media only screen and (max-width: 400px) {
+    #ProfileImage {
+      width: 60%;
+    }
+  }
+
+@media only screen and (max-width: 310px) {
+    #ProfileImage {
+      width: 90%;
+    }
+  }

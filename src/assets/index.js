@@ -6,8 +6,12 @@ import CloseIcon_Light from "./CloseIcon_Light.svg";
 import CloseIcon_Dark from "./CloseIcon_Dark.svg";
 import Logo_Dark from "./Logo_Dark.png";
 import Logo_Light from "./Logo_Light.svg";
+import ProjectExp from "./ProjectExp.png";
+import CodeExp from "./CodeExp.png";
+import CalenderExp from "./CalenderExp.png";
 import Github from "./SocialMediaIcons/Github.png";
 import LinkedIn from "./SocialMediaIcons/LinkedIn.png";
+import Email from "./SocialMediaIcons/Email.png";
 import AwesomeSupport_Dark from "./ServiceIcons/AwesomeSupport_Dark.svg";
 import AwesomeSupport_Light from "./ServiceIcons/AwesomeSupport_Light.svg";
 import CleanCode_Light from "./ServiceIcons/CleanCode_Light.svg";
@@ -47,8 +51,12 @@ export{
     CloseIcon_Dark,
     Logo_Dark,
     Logo_Light,
+    ProjectExp,
+    CodeExp,
+    CalenderExp,
     Github,
     LinkedIn,
+    Email,
     AwesomeSupport_Dark,
     AwesomeSupport_Light,
     CleanCode_Light,

@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="flex items-center ml-5">
                 <button className="w-7 hover:scale-105"><img src={currentTheme.Logo} alt="Logo" className="transition-all ease-in-out duration-100"/></button>
             </div>
-            <div className={`${menuDisplay ? 'block' : 'hidden'} flex flex-wrap flex-col absolute top-14 right-5 place-content-evenly items-center rounded-xl ${currentTheme.GeneralBG} ${currentTheme.FadedText} text-sm text-center z-20 w-[40%] sm:flex sm:p-0 sm:flex-row sm:static sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%]`}>
+            <div className={`${menuDisplay ? 'block' : 'hidden'} flex flex-wrap flex-col absolute top-14 right-5 place-content-evenly items-center rounded-xl ${currentTheme.FadedText} text-sm text-center z-20 w-[40%] ${currentTheme.GeneralBG} sm:flex sm:p-0 sm:flex-row sm:static sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%]`}>
                 <div onClick={() => {window.scrollTo({top: 0, behavior: "smooth"})}} className={`${(510 > scrollPosition) ? activeLink : ""} cursor-pointer m-2`}>Home</div>
                 <div onClick={() => {window.scrollTo({top: 695, behavior: "smooth"})}} className={`${(510 < scrollPosition & 1185 > scrollPosition) ? activeLink : ""} cursor-pointer m-2`}>About</div>
                 <div onClick={() => {window.scrollTo({top: 1390, behavior: "smooth"})}} className={`${(1185 < scrollPosition & 1924 > scrollPosition) ? activeLink : ""} cursor-pointer m-2`}>Services</div>
