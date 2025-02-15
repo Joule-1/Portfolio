@@ -1,10 +1,10 @@
-import { PortfolioIcon } from "../assets";
+import { PortfolioProjectIcon } from "../assets";
 
 const ProjectStorage = {
     Portfolio:{
-        Icon: PortfolioIcon,
+        Icon: PortfolioProjectIcon,
         HeadLine: "Portfolio",
-        GithubLink: "https://github.com/Joule-1/Portfolio",
+        GitHubLink: "https://github.com/Joule-1/Portfolio",
         ProjectLink: ""
     },
 }

@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 import { CountUp } from 'use-count-up';
-import { Github, LinkedIn, Profile, Email, CalenderExp, CodeExp, ProjectExp } from "../assets";
+import { GitHub, LinkedIn, Profile, Email, CalenderExp, CodeExp, ProjectExp } from "../assets";
 import ThemeStorage from "../utils/ThemeStorage";
 import { useContext } from "react";
 import { ThemeContext } from "../utils/ThemeToggle";
@@ -14,7 +14,7 @@ const Home = () => {
     return(
         <section className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} poppins-regular h-full sm:pb-5`}>
             <div className={`flex items-center justify-center flex-col sm:flex-row`}>
-                <div id='ProfileImage' className={`mt-20 h-100 flex rounded-4xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce sm:mt-25 sm:order-last sm:w-auto`}>
+                <div id='ProfileImage' className={`mt-20 h-95 flex rounded-4xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce sm:mt-25 sm:order-last sm:w-auto`}>
                     <img src={Profile} className="w-full"/>
                 </div>
                 <div className="w-full sm:w-[60%] sm:mt-25">  
@@ -44,7 +44,7 @@ const Home = () => {
                     <div className={`${currentTheme.FadedText} text-sm m-5 md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a full stack developer with a knack for turning code into visually stunning, interactive web experiences.</div>
                     <div className="flex items-center place-content-between m-5 max-w-[25%] min-w-[15%] w-auto sm:w-[30%] md:w-[25%] lg:w-[18%] xl:w-[15%]">
                         <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
-                            <img src={Github} className={`w-6 transition-all ease-in-out duration-100`} />
+                            <img src={GitHub} className={`w-6 transition-all ease-in-out duration-100`} />
                         </a>
                         <a href="https://www.linkedin.com/in/akshay-pandey-joule/" target="_blank" className="hover:scale-110 cursor-pointer">
                             <img src={LinkedIn} className={`w-6 transition-all ease-in-out duration-100`} />

@@ -2,20 +2,18 @@ import { useContext } from "react";
 import ThemeStorage from "../utils/ThemeStorage";
 import { ThemeContext } from "../utils/ThemeToggle";
 import possibleColors from "../utils/PossibleColors";
-import { JS, CSS, FrameMotion, Git, HTML, MongoDB, NodeJS, ReactJS, ReactRouter, Redux, Tailwind, Postman } from "../assets";
-
-const TechStack = [ JS, CSS, FrameMotion, Git, HTML, MongoDB, NodeJS, ReactJS, ReactRouter, Redux, Tailwind, Postman ];
+import TechCarousel from "./Carousel";
 
 const About = () => {
     const {theme, toggleTheme} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
 
     return(
-        <section id="about" className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} poppins-regular`}>
+        <section id="about" className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} poppins-regular pt-10`}>
             <div className="poppins-bold text-4xl pt-10 pb-5 flex justify-center">About&nbsp;
                 <span className={`text-${currentTheme.HeroColor}`}> Me</span>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mt-5 mb-20">
                 <div className={`h-80 hidden md:block`}>
                     <img src={currentTheme.AboutImage} alt="About Image" className="w-full h-full" />
                 </div>
@@ -30,6 +28,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <TechCarousel />
         </section>
     );
 };

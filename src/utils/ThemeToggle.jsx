@@ -5,6 +5,7 @@ import Projects from '../components/Portfolio';
 import Services from '../components/Services';
 import Navbar from '../components/Navbar';
 import About from '../components/About';
+import TechCarousel from '../components/Carousel';
 
 const ThemeContext = createContext();
 
@@ -20,8 +21,8 @@ function ThemeToggle() {
 		<Navbar />
 		<Home />
 		<About />
-		{/*<Services />
-		<Projects />*/}
+		{/* <Services />
+		<Projects /> */}
 		<Contact /> 
     </ThemeContext.Provider>
   )
