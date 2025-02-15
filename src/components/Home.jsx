@@ -44,13 +44,13 @@ const Home = () => {
                     <div className={`${currentTheme.FadedText} text-sm m-5 md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a full stack developer with a knack for turning code into visually stunning, interactive web experiences.</div>
                     <div className="flex items-center place-content-between m-5 max-w-[25%] min-w-[15%] w-auto sm:w-[30%] md:w-[25%] lg:w-[18%] xl:w-[15%]">
                         <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
-                            <img src={GitHub} className={`w-6 transition-all ease-in-out duration-100`} />
+                            <img src={GitHub} className={`w-7 transition-all ease-in-out duration-100`} />
                         </a>
                         <a href="https://www.linkedin.com/in/akshay-pandey-joule/" target="_blank" className="hover:scale-110 cursor-pointer">
-                            <img src={LinkedIn} className={`w-6 transition-all ease-in-out duration-100`} />
+                            <img src={LinkedIn} className={`w-7 transition-all ease-in-out duration-100`} />
                         </a>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pandeyakshay301@gmail.com" target="_blank" className="hover:scale-110 cursor-pointer">
-                            <img src={Email} className={`w-6 transition-all ease-in-out duration-100`} />
+                            <img src={Email} className={`w-7 transition-all ease-in-out duration-100`} />
                         </a>
                     </div>
                     <a href="Resume/Akshay_Pandey_Resume.pdf" target="_blank">
