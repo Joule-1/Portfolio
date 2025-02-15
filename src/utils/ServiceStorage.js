@@ -16,21 +16,21 @@ const ServiceStorage = {
         HeadLine: "Adaptive Design",
         ByLine: 'Responsive design adapts seamlessly across devices, ensuring accessibility and performance on all screen sizes.'
     },
-    AwesomeSupport:{
-        Icon: [AwesomeSupport_Light, AwesomeSupport_Dark],
-        HeadLine: "Awesome Support",
-        ByLine: 'Awesome support delivers fast, personalized solutions, ensuring user satisfaction, reliability, and a seamless experience.'
-    },
-    MaterialUI:{
-        Icon: [MaterialUI_Light, MaterialUI_Dark],
-        HeadLine: "Material UI",
-        ByLine: 'Material UI combines aesthetics with functionality, enabling developers to craft intuitive and visually appealing interfaces.'
-    },
-    MaterialUIIcons:{
-        Icon: [MaterialUIIcons_Light, MaterialUIIcons_Dark],
-        HeadLine: "Material UI Icons",
-        ByLine: 'Material UI Icons offer a vast, consistent symbol library that enhances usability, accessibility, and seamless navigation.'
-    },
+    // AwesomeSupport:{
+    //     Icon: [AwesomeSupport_Light, AwesomeSupport_Dark],
+    //     HeadLine: "Awesome Support",
+    //     ByLine: 'Awesome support delivers fast, personalized solutions, ensuring user satisfaction, reliability, and a seamless experience.'
+    // },
+    // MaterialUI:{
+    //     Icon: [MaterialUI_Light, MaterialUI_Dark],
+    //     HeadLine: "Material UI",
+    //     ByLine: 'Material UI combines aesthetics with functionality, enabling developers to craft intuitive and visually appealing interfaces.'
+    // },
+    // MaterialUIIcons:{
+    //     Icon: [MaterialUIIcons_Light, MaterialUIIcons_Dark],
+    //     HeadLine: "Material UI Icons",
+    //     ByLine: 'Material UI Icons offer a vast, consistent symbol library that enhances usability, accessibility, and seamless navigation.'
+    // },
 };
 
 export default ServiceStorage;

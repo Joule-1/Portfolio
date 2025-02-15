@@ -9,6 +9,8 @@ import { Logo_Light,
         CloseIcon_Dark,
         AboutImage_Light,
         AboutImage_Dark,
+        GitHub_Light,
+        GitHub_Dark
         } from "../assets";
 
 
@@ -17,6 +19,7 @@ const ThemeStorage = {
         ThemeImage: ThemeToggle_Light,
         NavbarMenu: NavbarMenu_Light,
         CloseIcon: CloseIcon_Light,
+        GitHubIcon: GitHub_Light,
         Logo: Logo_Light,
         Go: Go_Light,
         AboutImage: AboutImage_Light,
@@ -36,6 +39,7 @@ const ThemeStorage = {
         ThemeImage: ThemeToggle_Dark,
         NavbarMenu: NavbarMenu_Dark,
         CloseIcon: CloseIcon_Dark,
+        GitHubIcon: GitHub_Dark,
         Logo: Logo_Dark,
         Go: Go_Dark,
         AboutImage: AboutImage_Dark,

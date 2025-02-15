@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 import { CountUp } from 'use-count-up';
-import { GitHub, LinkedIn, Profile, Email, CalenderExp, CodeExp, ProjectExp } from "../assets";
+import { LinkedIn, Profile, Email, CalenderExp, CodeExp, ProjectExp } from "../assets";
 import ThemeStorage from "../utils/ThemeStorage";
 import { useContext } from "react";
 import { ThemeContext } from "../utils/ThemeToggle";
@@ -44,7 +44,7 @@ const Home = () => {
                     <div className={`${currentTheme.FadedText} text-sm m-5 md:text-sm lg:text-base`}>Hey there! I’m Akshay Pandey, a full stack developer with a knack for turning code into visually stunning, interactive web experiences.</div>
                     <div className="flex items-center place-content-between m-5 max-w-[25%] min-w-[15%] w-auto sm:w-[30%] md:w-[25%] lg:w-[18%] xl:w-[15%]">
                         <a href="https://github.com/joule-1" target="_blank" className="hover:scale-110 cursor-pointer">
-                            <img src={GitHub} className={`w-7 transition-all ease-in-out duration-100`} />
+                            <img src={currentTheme.GitHubIcon} className={`w-7 transition-all ease-in-out duration-100`} />
                         </a>
                         <a href="https://www.linkedin.com/in/akshay-pandey-joule/" target="_blank" className="hover:scale-110 cursor-pointer">
                             <img src={LinkedIn} className={`w-7 transition-all ease-in-out duration-100`} />

@@ -15,7 +15,7 @@ const About = () => {
             </div>
             <div className="flex justify-center items-center mt-5 mb-20">
                 <div className={`h-80 hidden md:block`}>
-                    <img src={currentTheme.AboutImage} alt="About Image" className="w-full h-full" />
+                    <img src={currentTheme.AboutImage} alt="About Image" className={`w-full h-full`}/>
                 </div>
                 <div className={`mx-5 md:w-[60%]`}> 
                     <div className="poppins-semibold m-5 lg:text-lg xl:text-xl">Coding By Day | Debugging By Night</div>

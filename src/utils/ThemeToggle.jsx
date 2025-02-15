@@ -21,8 +21,8 @@ function ThemeToggle() {
 		<Navbar />
 		<Home />
 		<About />
-		{/* <Services />
-		<Projects /> */}
+		 {/* <Services /> */}
+		{/*<Projects /> */}
 		<Contact /> 
     </ThemeContext.Provider>
   )

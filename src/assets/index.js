@@ -11,7 +11,8 @@ import CodeExp from "./CodeExp.png";
 import CalenderExp from "./CalenderExp.png";
 import AboutImage_Light from "./AboutImage_Light.png";
 import AboutImage_Dark from "./AboutImage_Dark.png";
-import GitHub from "./SocialMediaIcons/GitHub.png";
+import GitHub_Light from "./SocialMediaIcons/GitHub_Light.png";
+import GitHub_Dark from "./SocialMediaIcons/GitHub_Dark.png";
 import LinkedIn from "./SocialMediaIcons/LinkedIn.png";
 import Email from "./SocialMediaIcons/Email.png";
 import AwesomeSupport_Dark from "./ServiceIcons/AwesomeSupport_Dark.svg";
@@ -38,8 +39,6 @@ import Redux from "./TechStackIcons/Redux.png";
 import Tailwind from "./TechStackIcons/Tailwind.png";
 import Postman from "./TechStackIcons/Postman.png";
 import Azios from "./TechStackIcons/Azios.png";
-import Express from "./TechStackIcons/Express.png";
-import NextJS from "./TechStackIcons/NextJS.png";
 import Nodemon from "./TechStackIcons/Nodemon.png";
 import TypeScript from "./TechStackIcons/TypeScript.png";
 import PortfolioProjectIcon from "./ProjectIcons/PortfolioIcon.png";
@@ -61,7 +60,8 @@ export{
     CalenderExp,
     AboutImage_Light,
     AboutImage_Dark,
-    GitHub,
+    GitHub_Light,
+    GitHub_Dark,
     LinkedIn,
     Email,
     AwesomeSupport_Dark,
@@ -82,8 +82,6 @@ export{
     HTML5,
     JavaScript,
     Azios,
-    Express,
-    NextJS,
     Nodemon,
     TypeScript,
     MongoDB,

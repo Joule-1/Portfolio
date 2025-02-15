@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../utils/ThemeToggle";
 import ThemeStorage from "../utils/ThemeStorage";
 import ProjectStorage from "../utils/ProjectStorage";
-import { GitHub, Go_Normal } from "../assets";
+import { GitHub_Dark, Go_Normal } from "../assets";
 
 const Portfolio = () => {
 	const {theme, toggleTheme} = useContext(ThemeContext);
@@ -71,7 +71,7 @@ const Portfolio = () => {
 						<div className="w-[100%] mx-auto">
 							<div className="hover:scale-101">
 								<a href={ProjectStorageUpdated[key].GitHubLink} target="_blank" className="cursor-pointer absolute">
-									<img src={GitHub} alt="GitHub" className={`rounded-full w-6`} />
+									<img src={GitHub_Dark} alt="GitHub" className={`rounded-full w-6`} />
 								</a>
 							</div>
 								<img src={ProjectStorageUpdated[key].Icon} alt="Icon" className="w-full rounded-lg"/>
