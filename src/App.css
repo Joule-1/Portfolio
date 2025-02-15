@@ -121,6 +121,18 @@ img {
     }
   }
 
+@media only screen and (max-width: 430px) {
+    #ProfileImage {
+      width: 70%;
+    }
+  }
+
+@media only screen and (max-width: 360px) {
+    #ProfileImage {
+      width: 80%;
+    }
+  }
+
 @media only screen and (max-width: 310px) {
     #ProfileImage {
       width: 90%;

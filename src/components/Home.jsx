@@ -54,7 +54,7 @@ const Home = () => {
                         </a>
                     </div>
                     <a href="Resume/Akshay_Pandey_Resume.pdf" target="_blank">
-                        <button className={`rounded-xl text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.HeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
+                        <button className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.HeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}> 
                             Download Résumé
                         </button>
                     </a>
