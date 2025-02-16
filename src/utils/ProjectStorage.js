@@ -1,4 +1,4 @@
-import { PortfolioIcon1, PortfolioIcon2 } from "../assets";
+import { PortfolioIcon1, PortfolioIcon2, PokemonSearchAppIcon1 } from "../assets";
 // Max 4 Tech Stack
 // Exactly 2 Project Icons
 const ProjectStorage = {
@@ -6,9 +6,16 @@ const ProjectStorage = {
         HeadLine: "Portfolio",
         TechStack: ["React.js", "Tailwind CSS", "JavaScript"],
         GitHubLink: "https://github.com/Joule-1/Portfolio",
-        ProjectLink: "portfolio-r0sgam7ml-akshay04aps-projects.vercel.app",
+        ProjectLink: "https://portfolio-git-main-akshay04aps-projects.vercel.app/",
         ProjectIcon: [PortfolioIcon1, PortfolioIcon2]
     },
+    PokemonSearchApp:{
+        HeadLine: "Pokémon Search App",
+        TechStack: ["JavaScript", "CSS3", "HTML5"],
+        GitHubLink: "https://github.com/Joule-1/Pokemon-Search-App",
+        ProjectLink: "https://pokemon-search-app-one.vercel.app/",
+        ProjectIcon: [PokemonSearchAppIcon1]
+    }
 }
 
 export default ProjectStorage;

@@ -29,6 +29,7 @@ import Nodemon from "./TechStackIcons/Nodemon.png";
 import TypeScript from "./TechStackIcons/TypeScript.png";
 import PortfolioIcon1 from "../assets/ProjectIcons/Portfolio/one.png";
 import PortfolioIcon2 from "../assets/ProjectIcons/Portfolio/two.png";
+import PokemonSearchAppIcon1 from "../assets/ProjectIcons/PokemonSearchApp/one.png";
 
 export{
     ThemeToggle_Light,
@@ -61,5 +62,6 @@ export{
     Tailwind,
     Postman,
     PortfolioIcon1,
-    PortfolioIcon2
+    PortfolioIcon2,
+    PokemonSearchAppIcon1,
 };

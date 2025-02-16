@@ -60,10 +60,10 @@ const Project = () => {
                                         <div key={index} className={`text-sm`}>|&nbsp;&nbsp;{item}&nbsp;&nbsp;|</div>
                                     ))}
                                 </div>
-                                <div className='flex my-4'>
+                                <div className='flex my-4 items-center'>
                                     {(ProjectStorage[index].ProjectIcon).map((item, index) => (
                                         <div key={index} className="w-[50%] mx-2">
-                                            <img src={item} className='rounded-lg'/>
+                                            <img src={item} />
                                         </div>
                                     ))}
                                 </div>
