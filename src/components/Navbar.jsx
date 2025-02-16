@@ -14,7 +14,7 @@ const Navbar = ({toggleTheme, activeSection}) => {
             <div className="flex items-center ml-5 w-7 hover:scale-105">
                 <img src={currentTheme.Logo} alt="Logo" className="transition-all ease-in-out duration-100"/>
             </div>
-            <div className={`${menuDisplay ? 'block' : 'hidden'} flex flex-wrap flex-col absolute top-14 right-5 place-content-evenly items-center rounded-xl ${currentTheme.FadedText} text-sm text-center z-20 w-[40%] ${currentTheme.ServiceBG} sm:flex sm:p-0 sm:m-1 sm:flex-row sm:static sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%]`}>
+            <div className={`${menuDisplay ? 'block' : 'hidden'} poppins-medium flex flex-wrap flex-col absolute top-14 right-5 place-content-evenly items-center rounded-xl ${currentTheme.FadedText} text-sm text-center z-20 w-[40%] ${currentTheme.ServiceBG} sm:flex sm:p-0 sm:m-1 sm:flex-row sm:static sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%]`}>
                 <Link id="home" to="home" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="home" ? activeClassLink : ""}`}>Home</Link>
                 <Link id="about" to="about" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="about" ? activeClassLink : ""}`}>About</Link>
                 {/* <Link to="" smooth={true} duration={500} className="cursor-pointer m-2">Services</Link>
