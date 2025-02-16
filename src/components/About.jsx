@@ -3,7 +3,7 @@ import ThemeStorage from "../utils/ThemeStorage.js";
 import { ThemeContext } from "../utils/ThemeProvider.jsx";
 import possibleColors from "../utils/PossibleColors.js";
 import TechCarousel from "./Carousel.jsx";
-import { Element } from "react-scroll";
+import { Link, Element } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
@@ -34,7 +34,11 @@ const About = () => {
                         I am an enthusiastic Full Stack Developer skilled in front-end and back-end technologies like HTML, CSS, JavaScript, React, and Node.js. I take pride in creating scalable, user-focused web solutions that bring ideas to life. Focused on clean, maintainable code, I excel in collaborative environments, solving complex problems and delivering high-performance solutions. My commitment ensures every project is visually engaging, functionally robust, and optimized for seamless user accessibility.
                         </div>
                         <div className="flex">
-                            <button className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.HeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}>Contact Me</button>
+                            <button className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.HeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}>
+                                <Link id="contact" to="contact" smooth={true} duration={500}>
+                                    Contact Me
+                                </Link>
+                            </button>
                             <button className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.AlternateHeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.AlternateHeroColor} hover:border-${currentTheme.AlternateHeroColor} select-none cursor-pointer`}>My Works</button>
                         </div>
                     </div>
