@@ -15,12 +15,11 @@ const Navbar = ({toggleTheme, activeSection}) => {
                 <img src={currentTheme.Logo} alt="Logo" className="transition-all ease-in-out duration-100"/>
             </div>
             <div className={`${menuDisplay ? 'block' : 'hidden'} poppins-medium flex flex-wrap flex-col absolute top-14 right-5 place-content-evenly items-center rounded-xl ${currentTheme.FadedText} text-sm text-center z-20 w-[40%] ${currentTheme.ServiceBG} sm:flex sm:p-0 sm:m-1 sm:flex-row sm:static sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[35%]`}>
-                <Link id="home" to="home" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="home" ? activeClassLink : ""}`}>Home</Link>
+                <Link id="home" to="home" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="home" ? activeClassLink : "pt-2 sm:pt-0"}`}>Home</Link>
                 <Link id="about" to="about" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="about" ? activeClassLink : ""}`}>About</Link>
-                {/* <Link to="" smooth={true} duration={500} className="cursor-pointer m-2">Services</Link>
-                <Link to="" smooth={true} duration={500} className="cursor-pointer m-2">Portfolio</Link> */}
-                <Link id="contact" to="contact" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="contact" ? activeClassLink : ""}`}>Contact</Link>
-            </div>
+                <Link to="project" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="project" ? activeClassLink : ""}`}>Projects</Link>
+                <Link id="contact" to="contact" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="contact" ? activeClassLink : "pb-2 sm:pb-0"}`}>Contact</Link>         
+        </div>
             <div className="flex mr-5">
                 <div className="flex items-center w-6 mr-6">
                     <button className="hover:scale-105 w-full cursor-pointer" onClick={toggleTheme}><img src={currentTheme.ThemeImage} alt="Theme Toggle" className="w-full transition-all ease-in-out duration-100"/></button>

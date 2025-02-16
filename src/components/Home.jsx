@@ -24,7 +24,7 @@ const Home = () => {
 
     return(
         <Element name="home">
-            <section ref={ref} onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} poppins-regular h-full sm:pb-5`}>
+            <section ref={ref} onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.HomeBG} ${currentTheme.GeneralText} poppins-regular sm:pb-5`}>
                 <div className={`flex items-center justify-center flex-col sm:flex-row`}>
                     <div id='ProfileImage' className={`mt-20 h-95 flex rounded-4xl border-4 border-white bg-transparent shadow-lg ${currentTheme.Shadow} img-bounce sm:mt-25 sm:order-last sm:w-auto`}>
                         <img src={Profile} className="w-full"/>

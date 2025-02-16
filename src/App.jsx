@@ -1,17 +1,17 @@
 import './App.css'
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
-// import Projects from './components/Portfolio';
-// import Services from './components/Services';
+import Project from './components/Project.jsx';
 import Contact from './components/Contact.jsx';
 
 function App() {
 
   return (
     <>
-    	<Home />
-      <About />
-      <Contact />
+		<Home />
+		<About />
+		<Project />
+		<Contact />
     </>
   )
 }
