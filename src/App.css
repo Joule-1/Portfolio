@@ -101,11 +101,17 @@ img {
     #ProfileImage {
       width: 40%;
     }
+    #SocialMediaIcons{
+      width: 20%;
+    }
   }
 
 @media only screen and (max-width: 540px) {
     #ProfileImage {
       width: 45%;
+    }
+    #SocialMediaIcons{
+      width: 25%;
     }
   }
 
@@ -113,11 +119,17 @@ img {
     #ProfileImage {
       width: 50%;
     }
+    #SocialMediaIcons{
+      width: 30%;
+    }
   }
 
 @media only screen and (max-width: 400px) {
     #ProfileImage {
       width: 60%;
+    }
+    #SocialMediaIcons{
+      width: 35%;
     }
   }
 
@@ -125,16 +137,25 @@ img {
     #ProfileImage {
       width: 70%;
     }
+    #SocialMediaIcons{
+      width: 40%;
+    }
   }
 
 @media only screen and (max-width: 360px) {
     #ProfileImage {
       width: 80%;
     }
+    #SocialMediaIcons{
+      width: 45%;
+    }
   }
 
 @media only screen and (max-width: 310px) {
     #ProfileImage {
       width: 90%;
+    }
+    #SocialMediaIcons{
+      width: 50%;
     }
 }

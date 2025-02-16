@@ -1,12 +1,17 @@
 import './App.css'
-import { ThemeToggle } from './utils/ThemeToggle'
+import Home from './components/Home.jsx';
+import About from './components/About.jsx';
+// import Projects from './components/Portfolio';
+// import Services from './components/Services';
+import Contact from './components/Contact.jsx';
 
 function App() {
 
   return (
     <>
-    	<ThemeToggle />
-
+    	<Home />
+      <About />
+      <Contact />
     </>
   )
 }

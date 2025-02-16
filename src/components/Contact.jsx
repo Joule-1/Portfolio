@@ -1,12 +1,24 @@
 import { useContext, useRef, useState } from "react";
-import { ThemeContext } from "../utils/ThemeToggle";
-import ThemeStorage from "../utils/ThemeStorage";
+import { ThemeContext } from "../utils/ThemeProvider.jsx";
+import ThemeStorage from "../utils/ThemeStorage.js";
 import emailjs from '@emailjs/browser';
-import possibleColors from "../utils/PossibleColors";
+import possibleColors from "../utils/PossibleColors.js";
+import { Element } from "react-scroll";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
-	const {theme, toggleTheme} = useContext(ThemeContext);
+	const {theme, toggleMenu, menuDisplay, setActiveSection} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
+
+	const { ref } = useInView({
+		threshold: 0.5,
+		onChange: (inView) => {
+			if(inView){
+				setActiveSection("contact")
+			}
+		}
+	})
+
 	const [submitMessage, setSubmitMessage] = useState(false);
 	const [submitMessageDisplay, setSubmitMessageDisplay] = useState('slide-out');
 	const [submitText, setSubmitText] = useState('Send Message');
@@ -55,25 +67,27 @@ const Contact = () => {
 	};
 
   return (
-    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full pt-15 pb-10 poppins-regular overflow-hidden`}>
-		<div>
-			<div className={`absolute text-base p-1 px-3 ml-2 poppins-bold border-3 rounded-xl ${submitMessageDisplay} ${submitMessage ? `text-${currentTheme.HeroColor}` : 'text-red-700'}`}>{submitMessage ? 'Success' : 'Failed'}</div>
-			<div className={`text-2xl text-center poppins-semibold sm:text-4xl lg:text-4xl`}>Contact&nbsp; 
-				<span className={`text-${currentTheme.HeroColor}`}>Me</span>
+	<Element name="contact">
+		<section ref={ref} onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full pt-15 pb-10 poppins-regular overflow-hidden`}>
+			<div>
+				<div className={`absolute text-base p-1 px-3 ml-2 poppins-bold border-3 rounded-xl ${submitMessageDisplay} ${submitMessage ? `text-${currentTheme.HeroColor}` : 'text-red-700'}`}>{submitMessage ? 'Success' : 'Failed'}</div>
+				<div className={`text-center poppins-bold text-4xl`}>Contact&nbsp; 
+					<span className={`text-${currentTheme.HeroColor}`}>Me</span>
+				</div>
 			</div>
-		</div>
-		<form className={`flex justify-center items-center flex-col placeholder-${currentTheme.FadedColor} text-base mt-5 md:text-lg`} onSubmit={handleSubmit}>
-			<div className="w-[100%] flex flex-wrap justify-center md:w-[100%] lg:w-[60%]">
-				<input type="text" name="fullname" ref={fullname} placeholder="Full Name" required autoComplete="off" id="from_name" className={`${InputCSS} w-[80%] sm:w-[41%] md:w-[44%]`}/>
-				<input type="email" name="email" ref={email} placeholder="Email Address" required autoComplete="off" id="email_id" className={`${InputCSS} w-[80%] sm:w-[41%] md:w-[44%] `}/>
-			</div>
-			<input type="text" name="subject" ref={subject} placeholder="Email Subject" required autoComplete="off" className={`${InputCSS} w-[80%] sm:w-[85%] md:w-[90%] lg:w-[55%]`}/>
-			<textarea rows={"8"} name="message" ref={message} placeholder="Your Message" required autoComplete="off" id="message" className={`${InputCSS} w-[80%] sm:w-[85%] md:w-[90%] lg:w-[55%] resize-none`}></textarea>
-			<button type="submit" className={`mt-2 rounded-xl border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer w-[80%] sm:w-[60%] md:w-[40%] lg:w-[25%] xl:w-[20%]`}>
-				{submitText}
-			</button>
-		</form>
-	</section>
+			<form className={`flex justify-center items-center flex-col placeholder-${currentTheme.FadedColor} text-base mt-5 md:text-lg`} onSubmit={handleSubmit}>
+				<div className="w-[100%] flex flex-wrap justify-center md:w-[100%] lg:w-[60%]">
+					<input type="text" name="fullname" ref={fullname} placeholder="Full Name" required autoComplete="off" id="from_name" className={`${InputCSS} w-[80%] sm:w-[41%] md:w-[44%]`}/>
+					<input type="email" name="email" ref={email} placeholder="Email Address" required autoComplete="off" id="email_id" className={`${InputCSS} w-[80%] sm:w-[41%] md:w-[44%] `}/>
+				</div>
+				<input type="text" name="subject" ref={subject} placeholder="Email Subject" required autoComplete="off" className={`${InputCSS} w-[80%] sm:w-[85%] md:w-[90%] lg:w-[55%]`}/>
+				<textarea rows={"8"} name="message" ref={message} placeholder="Your Message" required autoComplete="off" id="message" className={`${InputCSS} w-[80%] sm:w-[85%] md:w-[90%] lg:w-[55%] resize-none`}></textarea>
+				<button type="submit" className={`mt-2 rounded-xl border-4 border-transparent bg-${currentTheme.HeroColor} p-2 text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer w-[80%] sm:w-[60%] md:w-[40%] lg:w-[25%] xl:w-[20%]`}>
+					{submitText}
+				</button>
+			</form>
+		</section>
+	</Element>
   )
 }
 

@@ -1,11 +1,11 @@
 import { useContext, useState, useEffect } from "react";
-import { ThemeContext } from "../utils/ThemeToggle";
+import { ThemeContext } from "../utils/ThemeProvider";
 import ThemeStorage from "../utils/ThemeStorage";
 import ProjectStorage from "../utils/ProjectStorage";
 import { GitHub_Dark, Go_Normal } from "../assets";
 
 const Portfolio = () => {
-	const {theme, toggleTheme} = useContext(ThemeContext);
+	const {theme, toggleMenu, menuDisplay} = useContext(ThemeContext);
     const currentTheme = ThemeStorage[theme];
 
 	const [iconTheme, setIconTheme] = useState(0);
@@ -57,7 +57,7 @@ const Portfolio = () => {
 	} 
 
   return (
-    <section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular ${sectionHeight}`}>
+    <section onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full poppins-regular ${sectionHeight}`}>
 		<div className="text-2xl poppins-bold pt-16 pb-2">&emsp;&emsp;
 				My&nbsp; 
 				<span className={`text-${currentTheme.HeroColor}`}>

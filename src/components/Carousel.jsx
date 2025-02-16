@@ -1,10 +1,9 @@
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useContext } from "react";
-import ThemeStorage from "../utils/ThemeStorage";
-import { ThemeContext } from "../utils/ThemeToggle";
+import ThemeStorage from "../utils/ThemeStorage.js";
+import { ThemeContext } from "../utils/ThemeProvider.jsx";
 import { 
         CSS3,
         Git,
@@ -19,11 +18,11 @@ import {
         Redux,
         Tailwind,
         Postman
-                  } from "../assets";
+                	} from "../assets";
 
 
 const TechCarousel = () => {
-	const {theme, toggleTheme} = useContext(ThemeContext);
+	const {theme, toggleMenu, menuDisplay} = useContext(ThemeContext);
 	const currentTheme = ThemeStorage[theme];
 
 	const TechStack = [JavaScript, CSS3, Git, HTML5, NodeJS ,ReactJS, Redux, Tailwind, Postman, Azios, Nodemon, TypeScript, MongoDB, currentTheme.GitHubIcon];
@@ -47,23 +46,19 @@ const TechCarousel = () => {
 			breakpoint: 768,   
 			settings: { slidesToShow: 2 }
 		},
-		{
-			breakpoint: 480,  
-			settings: { slidesToShow: 1.5 }
-		}
 		]
   };
 
 	return (
-		<div>
-		<Slider {...settings} className="slick-slider">
-			{TechStack.concat(TechStack).map((tech, index) => (
-			<div key={index} className="">
-				<img src={tech} className="w-12" alt="Tech Icon" />
-			</div>
-			))}
-		</Slider>
-		</div>
+		<section onClick={menuDisplay ? toggleMenu : undefined}>
+			<Slider {...settings} className="slick-slider">
+				{TechStack.concat(TechStack).map((tech, index) => (
+				<div key={index} className="">
+					<img src={tech} className="w-12" alt="Tech Icon" />
+				</div>
+				))}
+			</Slider>
+		</section>
 	);
 	};
 

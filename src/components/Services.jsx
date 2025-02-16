@@ -1,11 +1,11 @@
 	import ThemeStorage from "../utils/ThemeStorage";
-	import { ThemeContext } from "../utils/ThemeToggle";
+	import { ThemeContext } from "../utils/ThemeProvider";
 	import ServiceStorage from "../utils/ServiceStorage";
 	import { useEffect, useState, useContext } from "react";
 	import Tilt from "react-parallax-tilt";
 
 	const Services = () => {
-	const {theme, toggleTheme} = useContext(ThemeContext);
+	const {theme, toggleMenu, menuDisplay} = useContext(ThemeContext);
 	const currentTheme = ThemeStorage[theme];
 
 	const [iconTheme, setIconTheme] = useState(0);
@@ -57,7 +57,7 @@
 	}
 			
 		return (
-			<section className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} poppins-regular ${sectionHeight}`}>
+			<section onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} poppins-regular ${sectionHeight}`}>
 				<div className="mb-2 pt-16 text-2xl poppins-bold">&emsp;&emsp;
 					My&nbsp;
 					<span className={`text-${currentTheme.HeroColor}`}>

@@ -52,7 +52,7 @@ const ThemeStorage = {
         FadedColor: "white/70",
         Shadow: "shadow-yellow-400/40",
         GeneralBG: "bg-gradient-to-r from-[#1A0F2B] to-[#352A52]",
-        ServiceBG: "bg-[#3F2C5C]",
+        ServiceBG: "bg-gradient-to-r from-[#2D183F] to-[#3C2A53]",
     }
 };
 
