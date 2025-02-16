@@ -73,7 +73,7 @@ const Home = () => {
                     </div>
                 </div>
                 <Tilt 
-                    className={`mt-10 mx-auto w-[78%] flex items-center rounded-2xl place-content-evenly ${currentTheme.ServiceBG} poppins-semibold text-center hidden md:flex md:text-sm lg:text-base xl:text-lg `} 
+                    className={`mt-10 mx-auto flex items-center rounded-2xl place-content-evenly ${currentTheme.ServiceBG} poppins-semibold text-center hidden md:flex md:text-sm lg:text-base md:w-[90%] lg:w-[80%] xl:w-[78%] xl:text-lg `} 
                     tiltReverse={true} 
                     glareEnable={true} 
                     glareBorderRadius="16px" 

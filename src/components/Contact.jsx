@@ -68,7 +68,7 @@ const Contact = () => {
 
   return (
 	<Element name="contact">
-		<section ref={ref} onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full pt-15 pb-10 poppins-regular overflow-hidden`}>
+		<section ref={ref} onClick={menuDisplay ? toggleMenu : undefined} className={`${currentTheme.GeneralBG} ${currentTheme.GeneralText} h-full pt-20 pb-20 poppins-regular overflow-hidden`}>
 			<div>
 				<div className={`absolute text-base p-1 px-3 ml-2 poppins-bold border-3 rounded-xl ${submitMessageDisplay} ${submitMessage ? `text-${currentTheme.HeroColor}` : 'text-red-700'}`}>{submitMessage ? 'Success' : 'Failed'}</div>
 				<div className={`text-center poppins-bold text-4xl`}>Contact&nbsp; 

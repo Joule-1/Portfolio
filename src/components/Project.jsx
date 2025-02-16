@@ -4,6 +4,7 @@ import { useContext} from "react";
 import { ThemeContext } from "../utils/ThemeProvider.jsx";
 import possibleColors from "../utils/PossibleColors.js";
 import ThemeStorage from '../utils/ThemeStorage.js';
+import ProjectStorage from '../utils/ProjectStorage.js';
 import { Element } from "react-scroll";
 import { useInView } from 'react-intersection-observer';
 
@@ -27,35 +28,47 @@ const Project = () => {
                     <span className={`text-${currentTheme.HeroColor}`}> Projects</span>
                 </div>
                 <VerticalTimeline>
-                    <VerticalTimelineElement
-                        className={``}
-                        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                        contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
-                        date="2011 - present"
-                        // iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                        // iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                        // icon={<SchoolIcon />}
-                        >
-                        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                        <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        date="2010 - 2011"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
-                        <h3 className="vertical-timeline-element-title">Art Director</h3>
-                        <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                        <p>Creative Direction, User Experience, Visual Design, SEO, Online Marketing</p>
-                    </VerticalTimelineElement>
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        date="2008 - 2010"
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
-                        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-                        <p>User Experience, Visual Design</p>
-                    </VerticalTimelineElement>
+                    {Object.keys(ProjectStorage).map((index) => (
+                        <VerticalTimelineElement 
+                            key={index} 
+                            shadowSize={ "medium" }
+                            iconStyle={{
+                                background: currentTheme.HeroColorHex
+                            }}
+                            contentStyle={{
+                                background: currentTheme.ServiceBGHex
+                            }}>
+                                <div className='poppins-semibold text-xl '>
+                                    {ProjectStorage[index].HeadLine}
+                                </div>
+                                <div className='flex items-center place-content-between'>
+                                    <div className='hover:scale-105 rounded-xl my-4'>
+                                        <a href={ProjectStorage[index].ProjectLink} target='_blank' className='flex'>
+                                            <span className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 bg-${currentTheme.HeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} select-none cursor-pointer`}>
+                                                Project Link
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div className='w-8 hover:scale-105'>
+                                        <a href={ProjectStorage[index].GitHubLink} target='_blank'>
+                                            <img src={currentTheme.GitHubIcon} alt="GitHub" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='flex flex-wrap'>
+                                    {(ProjectStorage[index].TechStack).map((item, index) => (
+                                        <div key={index} className={`text-sm`}>|&nbsp;&nbsp;{item}&nbsp;&nbsp;|</div>
+                                    ))}
+                                </div>
+                                <div className='flex my-4'>
+                                    {(ProjectStorage[index].ProjectIcon).map((item, index) => (
+                                        <div key={index} className="w-[50%] mx-2">
+                                            <img src={item} className='rounded-lg'/>
+                                        </div>
+                                    ))}
+                                </div>
+                        </VerticalTimelineElement>
+                        ))}
                 </VerticalTimeline>
             </section>
         </Element>

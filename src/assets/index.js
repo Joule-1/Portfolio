@@ -27,10 +27,8 @@ import Postman from "./TechStackIcons/Postman.png";
 import Azios from "./TechStackIcons/Azios.png";
 import Nodemon from "./TechStackIcons/Nodemon.png";
 import TypeScript from "./TechStackIcons/TypeScript.png";
-import PortfolioProjectIcon from "./ProjectIcons/PortfolioIcon.png";
-import Go_Light from "./Go_Light.svg";
-import Go_Dark from "./Go_Dark.svg";
-import Go_Normal from "./Go_Normal.svg";
+import PortfolioIcon1 from "../assets/ProjectIcons/Portfolio/one.png";
+import PortfolioIcon2 from "../assets/ProjectIcons/Portfolio/two.png";
 
 export{
     ThemeToggle_Light,
@@ -62,8 +60,6 @@ export{
     Redux,
     Tailwind,
     Postman,
-    PortfolioProjectIcon,
-    Go_Light,
-    Go_Dark,
-    Go_Normal,
+    PortfolioIcon1,
+    PortfolioIcon2
 };

@@ -39,7 +39,11 @@ const About = () => {
                                     Contact Me
                                 </Link>
                             </button>
-                            <button className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.AlternateHeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.AlternateHeroColor} hover:border-${currentTheme.AlternateHeroColor} select-none cursor-pointer`}>My Works</button>
+                            <button className={`rounded-xl text-xs sm:text-sm border-4 border-transparent p-2 m-5 bg-${currentTheme.AlternateHeroColor} text-white poppins-semibold transition-all transform ease-in-out duration-200 hover:bg-transparent hover:text-${currentTheme.AlternateHeroColor} hover:border-${currentTheme.AlternateHeroColor} select-none cursor-pointer`}>
+                                <Link id="project" to="project" smooth={true} duration={500}>
+                                    My Works
+                                </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -28,9 +28,6 @@ function ThemeProvider({children}) {
     <ThemeContext.Provider value={{theme, toggleMenu, menuDisplay, setActiveSection}}>
 		<Navbar toggleTheme={toggleTheme} activeSection={activeSection}/>
 		{children}
-		{/* <Home />
-		<About />
-		<Contact /> */}
     </ThemeContext.Provider>
   )
 };

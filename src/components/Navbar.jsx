@@ -19,7 +19,7 @@ const Navbar = ({toggleTheme, activeSection}) => {
                 <Link id="about" to="about" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="about" ? activeClassLink : ""}`}>About</Link>
                 <Link to="project" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="project" ? activeClassLink : ""}`}>Projects</Link>
                 <Link id="contact" to="contact" smooth={true} duration={500} className={`cursor-pointer m-2 ${(activeSection)==="contact" ? activeClassLink : "pb-2 sm:pb-0"}`}>Contact</Link>         
-        </div>
+            </div>
             <div className="flex mr-5">
                 <div className="flex items-center w-6 mr-6">
                     <button className="hover:scale-105 w-full cursor-pointer" onClick={toggleTheme}><img src={currentTheme.ThemeImage} alt="Theme Toggle" className="w-full transition-all ease-in-out duration-100"/></button>

@@ -1,6 +1,6 @@
-import { Logo_Light, 
+import { 
+        Logo_Light, 
         Logo_Dark, 
-        Go_Light, Go_Dark, 
         ThemeToggle_Light, 
         ThemeToggle_Dark, 
         NavbarMenu_Light, 
@@ -8,7 +8,7 @@ import { Logo_Light,
         AboutImage_Light,
         AboutImage_Dark,
         GitHub_Light,
-        GitHub_Dark
+        GitHub_Dark,
         } from "../assets";
 
 
@@ -18,9 +18,9 @@ const ThemeStorage = {
         NavbarMenu: NavbarMenu_Light,
         GitHubIcon: GitHub_Light,
         Logo: Logo_Light,
-        Go: Go_Light,
         AboutImage: AboutImage_Light,
         HeroColor: "teal-800",
+        HeroColorHex: "#155E63",
         AlternateHeroColor: "gray-800",
         HomeBG: "bg-[#F8F8FF]",
         GeneralText: "text-black",
@@ -30,6 +30,7 @@ const ThemeStorage = {
         Shadow: "shadow-teal-400/40",
         GeneralBG: "bg-[#F2F2FB]",
         ServiceBG: "bg-[#ECECF8]",
+        ServiceBGHex: "#ECECF8"
     },
     
     DarkTheme: {
@@ -37,9 +38,9 @@ const ThemeStorage = {
         NavbarMenu: NavbarMenu_Dark,
         GitHubIcon: GitHub_Dark,
         Logo: Logo_Dark,
-        Go: Go_Dark,
         AboutImage: AboutImage_Dark,
         HeroColor: "yellow-400",
+        HeroColorHex: "#FACC15",
         AlternateHeroColor: "cyan-500",
         HomeBG: "bg-gradient-to-r from-[#2E1A47] to-[#4B3F72]",
         GeneralText: "text-white",
@@ -49,6 +50,7 @@ const ThemeStorage = {
         Shadow: "shadow-yellow-400/40",
         GeneralBG: "bg-gradient-to-r from-[#1A0F2B] to-[#352A52]",
         ServiceBG: "bg-gradient-to-r from-[#2D183F] to-[#3C2A53]",
+        ServiceBGHex: "#2D183F"
     }
 };
 
