@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-
-@theme{
-    --font-primary: "Poppins", serif;   
+@theme {
+    --font-primary: "Poppins", serif;
 }
 
 .poppins-regular {
@@ -46,7 +45,7 @@ img {
     -webkit-user-drag: none;
 }
 
-*{
+* {
     user-select: none;
     outline: none;
     box-sizing: border-box;
@@ -56,24 +55,25 @@ img {
     width: 8px;
     height: 8px;
 }
-  
+
 ::-webkit-scrollbar-track {
     background: #f0f0f0;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
-    transition: background 0.3s ease-in-out; 
+    transition: background 0.3s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 @keyframes ContainerBounce {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(-2%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
@@ -81,13 +81,13 @@ img {
         transform: none;
         animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
     }
-  }
-
-.img-bounce{
-    animation: ContainerBounce 2s infinite;   
 }
 
-.slide-out{
+.img-bounce {
+    animation: ContainerBounce 2s infinite;
+}
+
+.slide-out {
     transform: translateX(-112%);
     transition: transform 6s ease-in-out;
 }
@@ -98,64 +98,71 @@ img {
 }
 
 @media only screen and (max-width: 640px) {
-    #ProfileImage, #SocialMediaIconsFooter{
-      width: 40%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 40%;
     }
-    #SocialMediaIcons{
-      width: 20%;
+    #SocialMediaIcons {
+        width: 20%;
     }
-  }
+}
 
 @media only screen and (max-width: 540px) {
-    #ProfileImage, #SocialMediaIconsFooter {
-      width: 45%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 45%;
     }
-    #SocialMediaIcons{
-      width: 25%;
+    #SocialMediaIcons {
+        width: 25%;
     }
-  }
+}
 
 @media only screen and (max-width: 490px) {
-    #ProfileImage, #SocialMediaIconsFooter {
-      width: 50%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 50%;
     }
-    #SocialMediaIcons{
-      width: 30%;
+    #SocialMediaIcons {
+        width: 30%;
     }
-  }
+}
 
 @media only screen and (max-width: 400px) {
-    #ProfileImage, #SocialMediaIconsFooter {
-      width: 60%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 60%;
     }
-    #SocialMediaIcons{
-      width: 35%;
+    #SocialMediaIcons {
+        width: 35%;
     }
-  }
+}
 
 @media only screen and (max-width: 430px) {
-    #ProfileImage, #SocialMediaIconsFooter {
-      width: 70%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 70%;
     }
-    #SocialMediaIcons{
-      width: 40%;
+    #SocialMediaIcons {
+        width: 40%;
     }
-  }
+}
 
 @media only screen and (max-width: 360px) {
-    #ProfileImage, #SocialMediaIconsFooter {
-      width: 80%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 80%;
     }
-    #SocialMediaIcons{
-      width: 45%;
+    #SocialMediaIcons {
+        width: 45%;
     }
-  }
+}
 
 @media only screen and (max-width: 310px) {
-    #ProfileImage, #SocialMediaIconsFooter {
-      width: 90%;
+    #ProfileImage,
+    #SocialMediaIconsFooter {
+        width: 90%;
     }
-    #SocialMediaIcons{
-      width: 50%;
+    #SocialMediaIcons {
+        width: 50%;
     }
 }

@@ -31,7 +31,7 @@ import PortfolioIcon1 from "../assets/ProjectIcons/Portfolio/one.png";
 import PortfolioIcon2 from "../assets/ProjectIcons/Portfolio/two.png";
 import PokemonSearchAppIcon1 from "../assets/ProjectIcons/PokemonSearchApp/one.png";
 
-export{
+export {
     ThemeToggle_Light,
     ThemeToggle_Dark,
     NavbarMenu_Light,

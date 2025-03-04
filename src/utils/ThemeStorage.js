@@ -1,16 +1,15 @@
-import { 
-        Logo_Light, 
-        Logo_Dark, 
-        ThemeToggle_Light, 
-        ThemeToggle_Dark, 
-        NavbarMenu_Light, 
-        NavbarMenu_Dark, 
-        AboutImage_Light,
-        AboutImage_Dark,
-        GitHub_Light,
-        GitHub_Dark,
-        } from "../assets";
-
+import {
+    Logo_Light,
+    Logo_Dark,
+    ThemeToggle_Light,
+    ThemeToggle_Dark,
+    NavbarMenu_Light,
+    NavbarMenu_Dark,
+    AboutImage_Light,
+    AboutImage_Dark,
+    GitHub_Light,
+    GitHub_Dark,
+} from "../assets";
 
 const ThemeStorage = {
     LightTheme: {
@@ -30,9 +29,9 @@ const ThemeStorage = {
         Shadow: "shadow-teal-400/40",
         GeneralBG: "bg-[#F2F2FB]",
         ServiceBG: "bg-[#ECECF8]",
-        ServiceBGHex: "#ECECF8"
+        ServiceBGHex: "#ECECF8",
     },
-    
+
     DarkTheme: {
         ThemeImage: ThemeToggle_Dark,
         NavbarMenu: NavbarMenu_Dark,
@@ -50,8 +49,8 @@ const ThemeStorage = {
         Shadow: "shadow-yellow-400/40",
         GeneralBG: "bg-gradient-to-r from-[#1A0F2B] to-[#352A52]",
         ServiceBG: "bg-gradient-to-r from-[#2D183F] to-[#3C2A53]",
-        ServiceBGHex: "#2D183F"
-    }
+        ServiceBGHex: "#2D183F",
+    },
 };
 
 export default ThemeStorage;
