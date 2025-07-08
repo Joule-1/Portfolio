@@ -1,10 +1,5 @@
-import React, { Children, createContext, useState } from "react";
+import { createContext, useState } from "react";
 import Navbar from "../components/Navbar.jsx";
-import Home from "../components/Home.jsx";
-import About from "../components/About.jsx";
-// import Projects from '../components/Portfolio';
-// import Services from '../components/Services';
-import Contact from "../components/Contact.jsx";
 
 const ThemeContext = createContext();
 

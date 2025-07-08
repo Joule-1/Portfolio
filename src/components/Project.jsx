@@ -57,9 +57,20 @@ const Project = () => {
                             <div className="flex place-content-between items-center">
                                 <div className="my-4 rounded-xl hover:scale-105">
                                     <a
-                                        href={ProjectStorage[index].ProjectLink}
+                                        href={
+                                            ProjectStorage[index]
+                                                .ProjectLink !== ""
+                                                ? ProjectStorage[index]
+                                                      .ProjectLink
+                                                : undefined
+                                        }
                                         target="_blank"
-                                        className="flex"
+                                        className={`flex ${
+                                            ProjectStorage[index]
+                                                .ProjectLink === ""
+                                                ? "pointer-events-none opacity-50"
+                                                : ""
+                                        }`}
                                     >
                                         <span
                                             className={`rounded-xl border-4 border-transparent p-2 text-xs sm:text-sm bg-${currentTheme.HeroColor} poppins-semibold transform text-white transition-all duration-200 ease-in-out hover:bg-transparent hover:text-${currentTheme.HeroColor} hover:border-${currentTheme.HeroColor} cursor-pointer select-none`}
@@ -85,18 +96,6 @@ const Project = () => {
                                     (item, index) => (
                                         <div key={index} className={`text-sm`}>
                                             |&nbsp;&nbsp;{item}&nbsp;&nbsp;|
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                            <div className="my-4 flex items-center">
-                                {ProjectStorage[index].ProjectIcon.map(
-                                    (item, index) => (
-                                        <div
-                                            key={index}
-                                            className="mx-2 w-[50%]"
-                                        >
-                                            <img src={item} />
                                         </div>
                                     )
                                 )}
