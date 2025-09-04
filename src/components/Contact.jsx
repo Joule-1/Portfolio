@@ -116,7 +116,7 @@ const Contact = () => {
                         type="text"
                         name="subject"
                         ref={subject}
-                        placeholder="Email Subject"
+                        placeholder="Subject"
                         required
                         autoComplete="off"
                         className={`${InputCSS} w-[80%] sm:w-[85%] md:w-[90%] lg:w-[55%]`}
